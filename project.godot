@@ -67,6 +67,16 @@ Jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_5="Coin"
+2d_physics/layer_6="Item"
+2d_physics/layer_9="PlayerHurtBox"
+2d_physics/layer_10="PlayerHitBox"
+2d_physics/layer_13="EnemyHurtBox"
+2d_physics/layer_14="EnemyHitBox"
+
 [rendering]
 
 renderer/rendering_method="mobile"

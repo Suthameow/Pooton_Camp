@@ -2,4 +2,4 @@
 extends Node
 
 
-var run_speed : float = 150 # max speed
+var run_speed : float = 100 # max speed
