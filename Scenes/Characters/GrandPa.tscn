@@ -1,0 +1,1235 @@
+[gd_scene load_steps=29 format=3 uid="uid://bqupabvt8fl3b"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/GrandPa.gd" id="1_4cj56"]
+[ext_resource type="Texture2D" uid="uid://ce7m5k0yb5n2i" path="res://Images/Test_character.png" id="1_evji6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t77e"]
+atlas = ExtResource("1_evji6")
+region = Rect2(960, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8nla"]
+atlas = ExtResource("1_evji6")
+region = Rect2(960, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65jh4"]
+atlas = ExtResource("1_evji6")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0pqq"]
+atlas = ExtResource("1_evji6")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjlee"]
+atlas = ExtResource("1_evji6")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmp8d"]
+atlas = ExtResource("1_evji6")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54tyj"]
+atlas = ExtResource("1_evji6")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvh2e"]
+atlas = ExtResource("1_evji6")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lty00"]
+atlas = ExtResource("1_evji6")
+region = Rect2(896, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl3gc"]
+atlas = ExtResource("1_evji6")
+region = Rect2(832, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr140"]
+atlas = ExtResource("1_evji6")
+region = Rect2(768, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqkvh"]
+atlas = ExtResource("1_evji6")
+region = Rect2(896, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt5db"]
+atlas = ExtResource("1_evji6")
+region = Rect2(832, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wjks"]
+atlas = ExtResource("1_evji6")
+region = Rect2(768, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axn0d"]
+atlas = ExtResource("1_evji6")
+region = Rect2(896, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mx4x"]
+atlas = ExtResource("1_evji6")
+region = Rect2(832, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it85l"]
+atlas = ExtResource("1_evji6")
+region = Rect2(768, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsskn"]
+atlas = ExtResource("1_evji6")
+region = Rect2(896, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy0xw"]
+atlas = ExtResource("1_evji6")
+region = Rect2(832, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n602a"]
+atlas = ExtResource("1_evji6")
+region = Rect2(768, 128, 64, 64)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bowa0"]
+radius = 28.0
+height = 170.0
+
+[sub_resource type="Animation" id="Animation_0uy3h"]
+resource_name = "Idle"
+length = 1.33334
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0872665, -0.10472, -0.0872665]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/Body/Pants:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/Body/Pants:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.49384, -40.0221), Vector2(1.494, -42), Vector2(1.49384, -40.0221)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Marker2D/Body/Head/EyeLeft:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-6.252, -26), Vector2(-6.252, -26)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Marker2D/Body/Head/EyeLeft:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Marker2D/Body/Head/EyeLeft/EyebrownLeft:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.916667, 1, 1.08333, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.481, -14), Vector2(-1.481, -14), Vector2(-0.281, -16), Vector2(-1.481, -14), Vector2(-1.481, -14)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Marker2D/Body/Head/EyeLeft/EyebrownLeft:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.916667, 1, 1.08333, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.18326, 0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Marker2D/Body/Head/EyeRight:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-34.831, -26), Vector2(-34.831, -26)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Marker2D/Body/Head/EyeRight:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Marker2D/Body/Head/EyeRight/EyebrownLeft2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.916667, 1, 1.08333, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.109, -14), Vector2(1.109, -14), Vector2(-0.831, -16), Vector2(1.109, -14), Vector2(1.109, -14)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Marker2D/Body/Head/EyeRight/EyebrownLeft2:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.916667, 1, 1.08333, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.18326, 0.0, 0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Marker2D/Body/Head/Mouth:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-21.0447, -11.8794), Vector2(-21.0447, -11.8794)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Marker2D/Body/Head/Mouth:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Marker2D/Body/LegRight:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-0.96, -5.068), Vector2(-0.96, -5.068)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Marker2D/Body/LegRight:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.340339, 0.357792, 0.340339]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Marker2D/Body/LegRight/LegRightLow:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.128, 28.783), Vector2(0.128, 28.783)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Marker2D/Body/LegRight/LegRightLow:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.637045, -0.637045]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Marker2D/Body/LegRight/LegRightLow/FootRight:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.163, 18.057), Vector2(9.163, 18.057)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Marker2D/Body/LegRight/LegRightLow/FootRight:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0872665, 0.0872665]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Marker2D/Body/LegLeft:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.382, 0.872), Vector2(9.382, 0.872)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Marker2D/Body/LegLeft:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.558505, 0.610865, 0.558505]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2.834, 26.45), Vector2(-2.834, 26.45)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.532325, -0.532325]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow/FootLeft:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.16276, 18.0567), Vector2(9.16276, 18.0567)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow/FootLeft:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0872665, 0.0872665]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Marker2D/Body/ArmRight:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-4.01007, -34.4807), Vector2(-4.01007, -34.4807)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Marker2D/Body/ArmRight:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.165806, 0.244346, 0.165806]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Marker2D/Body/ArmRight/armLowRight:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7.285, 14.42), Vector2(-7.285, 14.42)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Marker2D/Body/ArmRight/armLowRight:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.305433, -0.305433]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Marker2D/Body/ArmRight/armLowRight/PaddingRight:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11.17, -10.012), Vector2(-11.17, -10.012)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Marker2D/Body/ArmRight/armLowRight/PaddingRight:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.165806, 0.165806]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Marker2D/Body/ArmLeft:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.091, -37.543), Vector2(7.091, -37.543)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Marker2D/Body/ArmLeft:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.666666, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.226893, -0.279253, -0.226893]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7.2845, 14.42), Vector2(-7.2845, 14.42)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft/PaddingLeft:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11.1699, -10.0116), Vector2(-11.1699, -10.0116)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft/PaddingLeft:rotation")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0tcae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0872665]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/Body/Pants:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/Body/Pants:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.49384, -40.0221)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Marker2D/Body/Head/EyeLeft:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.252, -26)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Marker2D/Body/Head/EyeLeft:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Marker2D/Body/Head/EyeLeft/EyebrownLeft:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.481, -14)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Marker2D/Body/Head/EyeLeft/EyebrownLeft:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Marker2D/Body/Head/EyeRight:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-34.831, -26)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Marker2D/Body/Head/EyeRight:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Marker2D/Body/Head/EyeRight/EyebrownLeft2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.109, -14)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Marker2D/Body/Head/EyeRight/EyebrownLeft2:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Marker2D/Body/Head/Mouth:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21.0447, -11.8794)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Marker2D/Body/Head/Mouth:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Marker2D/Body/LegRight:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.96, -5.068)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Marker2D/Body/LegRight:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.340339]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Marker2D/Body/LegRight/LegRightLow:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.128, 28.783)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Marker2D/Body/LegRight/LegRightLow:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.637045]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Marker2D/Body/LegRight/LegRightLow/FootRight:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.163, 18.057)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Marker2D/Body/LegRight/LegRightLow/FootRight:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Marker2D/Body/LegLeft:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.382, 0.872)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Marker2D/Body/LegLeft:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.558505]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2.834, 26.45)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.532325]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow/FootLeft:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.16276, 18.0567)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Marker2D/Body/LegLeft/LegLeftLow/FootLeft:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Marker2D/Body/ArmRight:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.01007, -34.4807)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Marker2D/Body/ArmRight:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.165806]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Marker2D/Body/ArmRight/armLowRight:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.285, 14.42)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Marker2D/Body/ArmRight/armLowRight:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.305433]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Marker2D/Body/ArmRight/armLowRight/PaddingRight:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11.17, -10.012)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Marker2D/Body/ArmRight/armLowRight/PaddingRight:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.165806]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Marker2D/Body/ArmLeft:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.091, -37.543)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Marker2D/Body/ArmLeft:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.226893]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.2845, 14.42)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft/PaddingLeft:position")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11.1699, -10.0116)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Marker2D/Body/ArmLeft/ArmLowLeft/PaddingLeft:rotation")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcqxx"]
+_data = {
+"Idle": SubResource("Animation_0uy3h"),
+"RESET": SubResource("Animation_0tcae")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7h2yx"]
+radius = 7.5
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vjlja"]
+radius = 7.5
+height = 32.0
+
+[node name="GrandPa" type="CharacterBody2D"]
+collision_layer = 4097
+script = ExtResource("1_4cj56")
+metadata/_edit_horizontal_guides_ = [48.0]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Marker2D"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+rotation = -0.0872665
+texture = SubResource("AtlasTexture_2t77e")
+offset = Vector2(2, -18)
+
+[node name="Pants" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.231373, 0.333333, 0.262745, 1)
+texture = SubResource("AtlasTexture_r8nla")
+offset = Vector2(2.21, 0)
+
+[node name="Head" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(1.49384, -40.0221)
+texture = SubResource("AtlasTexture_65jh4")
+offset = Vector2(-11.52, -50.31)
+
+[node name="Hair" type="Sprite2D" parent="Marker2D/Body/Head"]
+position = Vector2(-1.85556, -13.212)
+texture = SubResource("AtlasTexture_r0pqq")
+offset = Vector2(-11.52, -50.31)
+
+[node name="EyeLeft" type="Sprite2D" parent="Marker2D/Body/Head"]
+position = Vector2(-6.252, -26)
+texture = SubResource("AtlasTexture_mjlee")
+
+[node name="EyebrownLeft" type="Sprite2D" parent="Marker2D/Body/Head/EyeLeft"]
+position = Vector2(-1.481, -14)
+texture = SubResource("AtlasTexture_nmp8d")
+flip_h = true
+
+[node name="EyeRight" type="Sprite2D" parent="Marker2D/Body/Head"]
+position = Vector2(-34.831, -26)
+texture = SubResource("AtlasTexture_54tyj")
+flip_h = true
+
+[node name="EyebrownLeft2" type="Sprite2D" parent="Marker2D/Body/Head/EyeRight"]
+position = Vector2(1.109, -14)
+texture = SubResource("AtlasTexture_nmp8d")
+
+[node name="Mouth" type="Sprite2D" parent="Marker2D/Body/Head"]
+self_modulate = Color(0.956863, 0.952941, 0.870588, 1)
+position = Vector2(-21.0447, -11.8794)
+texture = SubResource("AtlasTexture_kvh2e")
+
+[node name="LegRight" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.231373, 0.333333, 0.262745, 1)
+position = Vector2(-0.96, -5.068)
+rotation = 0.340339
+texture = SubResource("AtlasTexture_lty00")
+offset = Vector2(1.93, 18.425)
+flip_h = true
+
+[node name="LegRightLow" type="Sprite2D" parent="Marker2D/Body/LegRight"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+show_behind_parent = true
+position = Vector2(0.128, 28.783)
+rotation = -0.637045
+texture = SubResource("AtlasTexture_gl3gc")
+offset = Vector2(0.585, 11.285)
+
+[node name="FootRight" type="Sprite2D" parent="Marker2D/Body/LegRight/LegRightLow"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(9.163, 18.057)
+rotation = 0.0872665
+texture = SubResource("AtlasTexture_pr140")
+offset = Vector2(-5.335, -2)
+
+[node name="LegLeft" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.231373, 0.333333, 0.262745, 1)
+position = Vector2(9.382, 0.872)
+rotation = 0.558505
+texture = SubResource("AtlasTexture_uqkvh")
+offset = Vector2(-2.355, 15.385)
+metadata/_edit_group_ = true
+
+[node name="LegLeftLow" type="Sprite2D" parent="Marker2D/Body/LegLeft"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+show_behind_parent = true
+position = Vector2(-2.834, 26.45)
+rotation = -0.532325
+texture = SubResource("AtlasTexture_qt5db")
+offset = Vector2(0.585, 11.285)
+
+[node name="FootLeft" type="Sprite2D" parent="Marker2D/Body/LegLeft/LegLeftLow"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(9.16276, 18.0567)
+rotation = 0.0872665
+texture = SubResource("AtlasTexture_7wjks")
+offset = Vector2(-5.335, -2)
+
+[node name="ArmRight" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(-4.01007, -34.4807)
+rotation = 0.165806
+texture = SubResource("AtlasTexture_axn0d")
+offset = Vector2(-5.685, 12.115)
+metadata/_edit_group_ = true
+
+[node name="armLowRight" type="Sprite2D" parent="Marker2D/Body/ArmRight"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(-7.285, 14.42)
+rotation = -0.305433
+texture = SubResource("AtlasTexture_3mx4x")
+offset = Vector2(-4.76, -8.975)
+
+[node name="PaddingRight" type="Sprite2D" parent="Marker2D/Body/ArmRight/armLowRight"]
+self_modulate = Color(0.521569, 0.294118, 0.239216, 1)
+position = Vector2(-11.17, -10.012)
+rotation = 0.165806
+texture = SubResource("AtlasTexture_it85l")
+offset = Vector2(-1.975, 5.705)
+
+[node name="ArmLeft" type="Sprite2D" parent="Marker2D/Body"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(7.091, -37.543)
+rotation = -0.226893
+texture = SubResource("AtlasTexture_tsskn")
+offset = Vector2(-5.685, 12.115)
+metadata/_edit_group_ = true
+
+[node name="ArmLowLeft" type="Sprite2D" parent="Marker2D/Body/ArmLeft"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(-7.2845, 14.42)
+texture = SubResource("AtlasTexture_hy0xw")
+offset = Vector2(-4.76, -8.975)
+
+[node name="PaddingLeft" type="Sprite2D" parent="Marker2D/Body/ArmLeft/ArmLowLeft"]
+self_modulate = Color(0.521569, 0.294118, 0.239216, 1)
+position = Vector2(-11.1699, -10.0116)
+texture = SubResource("AtlasTexture_n602a")
+offset = Vector2(-1.975, 5.705)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-8, -38)
+shape = SubResource("CapsuleShape2D_bowa0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rcqxx")
+}
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4096
+collision_mask = 512
+
+[node name="PaddingRight" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-33, -19)
+rotation = -0.235619
+shape = SubResource("CapsuleShape2D_7h2yx")
+
+[node name="PaddingLeft" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-14, -19)
+rotation = -0.523599
+shape = SubResource("CapsuleShape2D_vjlja")
