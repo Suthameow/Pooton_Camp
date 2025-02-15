@@ -55,13 +55,13 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Hit"):
 		sprite_action = true
 		$AnimationPlayer.play("Punch")
-		print("Punch Damage:" + str(Global.calculate_damage(100, 100, 100, 20)))
+		#print("Punch Damage:" + str(Global.calculate_damage(PlayerData.attack_melee, 0, PlayerData.defense, 0)))
 		await $AnimationPlayer.animation_finished
 		sprite_action = false
 	
 	if Input.is_action_just_released("Kick"):
 		sprite_action = true
 		$AnimationPlayer.play("Kick")
-		print("Kick Damage:" + str(Global.calculate_damage(100, 100, 100, 20)))
+		#print("Kick Damage:" + str(Global.calculate_damage(100, 100, 100, 20)))
 		await $AnimationPlayer.animation_finished
 		sprite_action = false

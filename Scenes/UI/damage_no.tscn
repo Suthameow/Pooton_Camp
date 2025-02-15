@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://7jayk6adqw46"]
+
+[ext_resource type="Theme" uid="uid://q6hfrqimytq8" path="res://Images/Theme/damage_no.tres" id="1_8hfv4"]
+
+[node name="Damage_no" type="Label"]
+z_index = 5
+offset_right = 28.0
+offset_bottom = 38.0
+size_flags_horizontal = 4
+theme = ExtResource("1_8hfv4")
+text = "16
+"
+horizontal_alignment = 1
+vertical_alignment = 1

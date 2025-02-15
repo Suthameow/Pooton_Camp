@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqupabvt8fl3b"]
+[gd_scene load_steps=28 format=3 uid="uid://bqupabvt8fl3b"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/GrandPa.gd" id="1_4cj56"]
 [ext_resource type="Texture2D" uid="uid://ce7m5k0yb5n2i" path="res://Images/Test_character.png" id="1_evji6"]
@@ -83,9 +83,12 @@ region = Rect2(832, 128, 64, 64)
 atlas = ExtResource("1_evji6")
 region = Rect2(768, 128, 64, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxl0o"]
+size = Vector2(40.0534, 31.3717)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bowa0"]
-radius = 28.0
-height = 170.0
+radius = 18.0
+height = 50.0
 
 [sub_resource type="Animation" id="Animation_0uy3h"]
 resource_name = "Idle"
@@ -1062,14 +1065,6 @@ _data = {
 "RESET": SubResource("Animation_0tcae")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7h2yx"]
-radius = 7.5
-height = 32.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vjlja"]
-radius = 7.5
-height = 32.0
-
 [node name="GrandPa" type="CharacterBody2D"]
 collision_layer = 4097
 script = ExtResource("1_4cj56")
@@ -1210,9 +1205,17 @@ position = Vector2(-11.1699, -10.0116)
 texture = SubResource("AtlasTexture_n602a")
 offset = Vector2(-1.975, 5.705)
 
+[node name="HurtBox" type="Area2D" parent="Marker2D"]
+collision_layer = 4096
+collision_mask = 512
+
+[node name="Padding" type="CollisionShape2D" parent="Marker2D/HurtBox"]
+position = Vector2(-17.8667, -19.9632)
+rotation = -0.235619
+shape = SubResource("RectangleShape2D_vxl0o")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-8, -38)
+position = Vector2(0, 22)
 shape = SubResource("CapsuleShape2D_bowa0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1220,16 +1223,7 @@ libraries = {
 "": SubResource("AnimationLibrary_rcqxx")
 }
 
-[node name="HurtBox" type="Area2D" parent="."]
-collision_layer = 4096
-collision_mask = 512
+[node name="Damage_no" type="Node2D" parent="."]
+position = Vector2(-41.225, -41.64)
 
-[node name="PaddingRight" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-33, -19)
-rotation = -0.235619
-shape = SubResource("CapsuleShape2D_7h2yx")
-
-[node name="PaddingLeft" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-14, -19)
-rotation = -0.523599
-shape = SubResource("CapsuleShape2D_vjlja")
+[connection signal="area_entered" from="Marker2D/HurtBox" to="." method="_on_hurt_box_area_entered"]
