@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://prtbbqy5doyc"]
 
-[ext_resource type="PackedScene" uid="uid://2oc31fjjbaqt" path="res://Scenes/Main/test_character.tscn" id="1_i1cgf"]
+[ext_resource type="PackedScene" uid="uid://2oc31fjjbaqt" path="res://Scenes/Characters/Doctor.tscn" id="1_i1cgf"]
 
 [node name="TestMap" type="Node2D"]
 
-[node name="Character_Test" parent="." instance=ExtResource("1_i1cgf")]
-position = Vector2(148, 201)
+[node name="Doctor" parent="." instance=ExtResource("1_i1cgf")]
+position = Vector2(918, 573)
