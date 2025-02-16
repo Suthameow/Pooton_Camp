@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bqupabvt8fl3b" path="res://Scenes/Characters/GrandPa.tscn" id="2_hbhju"]
 
 [node name="TestMap" type="Node2D"]
+y_sort_enabled = true
 
 [node name="GrandPa" parent="." instance=ExtResource("2_hbhju")]
 position = Vector2(1080, 572)

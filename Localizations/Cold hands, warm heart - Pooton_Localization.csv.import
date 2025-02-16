@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dldfndnvv4h2d"
+
+[deps]
+
+files=["res://Localizations/Cold hands, warm heart - Pooton_Localization.en.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.th.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.cn.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.de.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.fr.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.pt.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.es.translation"]
+
+source_file="res://Localizations/Cold hands, warm heart - Pooton_Localization.csv"
+dest_files=["res://Localizations/Cold hands, warm heart - Pooton_Localization.en.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.th.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.cn.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.de.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.fr.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.pt.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.es.translation"]
+
+[params]
+
+compress=true
+delimiter=0

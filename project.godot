@@ -37,6 +37,11 @@ folder_colors={
 "res://Scenes/": "yellow"
 }
 
+[global_group]
+
+Character=""
+Enemy=""
+
 [input]
 
 Backward={
@@ -87,6 +92,10 @@ Kick={
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localizations/Cold hands, warm heart - Pooton_Localization.en.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.th.translation", "res://Localizations/Cold hands, warm heart - Pooton_Localization.cn.translation")
 
 [layer_names]
 

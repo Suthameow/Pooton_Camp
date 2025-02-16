@@ -8,6 +8,10 @@ const friction : float = 10.0
 var sprite_action : bool = false
 
 
+func _ready() -> void:
+	pass
+
+
 # Make an Action RPG in Godot 3.2 - https://www.youtube.com/watch?v=EQA9MJ5_TxU&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a&index=2
 # Make an action RPG in Godot 4 - https://www.youtube.com/watch?v=aixZT_e8xsk&list=PLzp-pJarR3ar6OSfunTB2Qpwx9fl3Pxbg&index=12
 # animatedSprite2D + Melee attacking - https://www.youtube.com/watch?v=q0WHhsmifkQ
@@ -28,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity += input_vector * acceleration * delta
 			velocity = velocity.limit_length(PlayerData.run_speed * delta) # limit_length = setup the ceiling number.
+			
 			if input_vector.x >= 0: # Move to the right | Turn right
 				$Marker2D.scale.x = 1
 				$AnimationPlayer.play("Run")
@@ -45,10 +50,6 @@ func _physics_process(delta: float) -> void:
 			$AnimationPlayer.play("Idle")
 	
 	move_and_collide(velocity * delta * PlayerData.run_speed)
-
-
-func _ready() -> void:
-	print(Global.calculate_damage(100, 100, 100, 20))
 
 
 func _input(event: InputEvent) -> void:

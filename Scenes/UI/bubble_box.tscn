@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1cc1mdywm8x5"]
+
+[ext_resource type="Theme" uid="uid://yemmps56otm7" path="res://Images/Theme/en_Bubble.tres" id="1_wicb4"]
+
+[node name="Bubble_Box" type="PanelContainer"]
+offset_right = 70.0
+offset_bottom = 79.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_wicb4")
+
+[node name="Dialoque" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "."
+vertical_alignment = 1
