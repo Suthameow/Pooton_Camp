@@ -17,52 +17,42 @@ func _ready() -> void:
 # animatedSprite2D + Melee attacking - https://www.youtube.com/watch?v=q0WHhsmifkQ
 func _physics_process(delta: float) -> void:
 	
-	
 	# Controling - character movement
 	var input_vector : Vector2 = Vector2.ZERO
 	input_vector.x = Input.get_axis("Backward", "Forward") #input_vector.x = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 	input_vector.y = Input.get_axis("Vertical_Up", "Vertical_Down") #input_vector.y = Input.get_action_strength("Vertical_Down") - Input.get_action_strength("Vertical_Up")
-	input_vector = input_vector.normalized()
+	input_vector = input_vector.normalized() 
 	
 	if input_vector != Vector2.ZERO: # Character is moving, not (0, 0) AND not action
-		#print(str(input_vector) + " : " + str(sprite_action))
-		
 		if sprite_action == true:
-			velocity = velocity.move_toward(Vector2.ZERO, friction * delta) # a little bit slide.
+			velocity = velocity.move_toward(Vector2.ZERO, friction ) # a little bit slide.
 		else:
-			velocity += input_vector * acceleration * delta
-			velocity = velocity.limit_length(PlayerData.run_speed * delta) # limit_length = setup the ceiling number.
-			
+			velocity += input_vector * acceleration
+			velocity = velocity.limit_length(PlayerData.run_speed ) * Vector2(1, 0.7071) # limit_length = setup the ceiling number.
 			if input_vector.x >= 0: # Move to the right | Turn right
 				$Marker2D.scale.x = 1
 				$AnimationPlayer.play("Run")
 			else: # Move to the left | Turn left
 				$Marker2D.scale.x = -1
 				$AnimationPlayer.play("Run")
-		
-		
 	else: # released / not moving
-		velocity = velocity.move_toward(Vector2.ZERO, friction * delta) # a little bit slide.
-		
+		velocity = velocity.move_toward(Vector2.ZERO, friction) # a little bit slide.
 		if sprite_action == true:
 			pass
 		else:
 			$AnimationPlayer.play("Idle")
-	
-	move_and_collide(velocity * delta * PlayerData.run_speed)
+	move_and_slide()
 
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Hit"):
 		sprite_action = true
 		$AnimationPlayer.play("Punch")
-		#print("Punch Damage:" + str(Global.calculate_damage(PlayerData.attack_melee, 0, PlayerData.defense, 0)))
 		await $AnimationPlayer.animation_finished
 		sprite_action = false
 	
 	if Input.is_action_just_released("Kick"):
 		sprite_action = true
 		$AnimationPlayer.play("Kick")
-		#print("Kick Damage:" + str(Global.calculate_damage(100, 100, 100, 20)))
 		await $AnimationPlayer.animation_finished
 		sprite_action = false

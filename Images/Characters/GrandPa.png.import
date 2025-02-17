@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce7m5k0yb5n2i"
-path="res://.godot/imported/Test_character.png-e24d27ff3acb9f13c69f7771d31c4cc3.ctex"
+uid="uid://yknhusrcwtm8"
+path="res://.godot/imported/GrandPa.png-6e068673eb5b02e6626278c13e309f78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Test_character.png"
-dest_files=["res://.godot/imported/Test_character.png-e24d27ff3acb9f13c69f7771d31c4cc3.ctex"]
+source_file="res://Images/Characters/GrandPa.png"
+dest_files=["res://.godot/imported/GrandPa.png-6e068673eb5b02e6626278c13e309f78.ctex"]
 
 [params]
 

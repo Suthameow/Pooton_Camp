@@ -51,12 +51,11 @@ func display_damage(value : int, position : Vector2):
 		number.call_deferred("queue_free")
 
 
-func display_dialoque(dialoque : String, position : Vector2, duration : float):
-	clear_node(self)
+func display_dialoque(dialoque : String, duration : float, path : Node):
+	clear_node(path)
 	
 	var bubble_box = BUBBLE_BOX.instantiate()
 	bubble_box.get_node("%Dialoque").text = dialoque
-	bubble_box.position = position
 	
 	if language_setting == 0:
 		bubble_box.set_theme(EN_BUBBLE)
@@ -65,9 +64,9 @@ func display_dialoque(dialoque : String, position : Vector2, duration : float):
 	else:
 		bubble_box.set_theme(TH_BUBBLE)
 	
-	call_deferred("add_child", bubble_box)
+	path.call_deferred("add_child", bubble_box)
 	
 	await get_tree().create_timer(duration).timeout # wait for duration sec.
 	
-	if bubble_box != null:  # BUG: Destroy before await finish
-		bubble_box.call_deferred("queue_free")
+	if path.get_children().size() > 0:  # BUG: Destroy before await finish
+		path.get_child(0).call_deferred("queue_free")

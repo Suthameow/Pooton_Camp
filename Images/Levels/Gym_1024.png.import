@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yknhusrcwtm8"
-path="res://.godot/imported/GrandPa.png-d2b6d23fdf774502b553bbfc5fc46040.ctex"
+uid="uid://cfu2ai4q8bx00"
+path="res://.godot/imported/Gym_1024.png-2efcdd8a6e37d9516c1db18b2780a33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/GrandPa.png"
-dest_files=["res://.godot/imported/GrandPa.png-d2b6d23fdf774502b553bbfc5fc46040.ctex"]
+source_file="res://Images/Levels/Gym_1024.png"
+dest_files=["res://.godot/imported/Gym_1024.png-2efcdd8a6e37d9516c1db18b2780a33a.ctex"]
 
 [params]
 
