@@ -103,9 +103,13 @@ locale/translations=PackedStringArray("res://Localizations/Cold hands, warm hear
 2d_physics/layer_5="Coin"
 2d_physics/layer_6="Item"
 2d_physics/layer_9="PlayerHurtBox"
-2d_physics/layer_10="PlayerHitBox"
+2d_physics/layer_10="PlayerPunch"
+2d_physics/layer_11="PlayerKick"
+2d_physics/layer_12="PlayerThrow"
 2d_physics/layer_13="EnemyHurtBox"
-2d_physics/layer_14="EnemyHitBox"
+2d_physics/layer_14="EnemyPunch"
+2d_physics/layer_15="EnemyKick"
+2d_physics/layer_16="EnemyThrow"
 
 [rendering]
 

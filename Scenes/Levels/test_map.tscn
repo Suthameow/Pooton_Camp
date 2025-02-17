@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://prtbbqy5doyc"]
+
+[ext_resource type="PackedScene" uid="uid://2oc31fjjbaqt" path="res://Scenes/Characters/Doctor.tscn" id="1_i1cgf"]
+[ext_resource type="Script" path="res://Scenes/Levels/test_map.gd" id="1_kqvq4"]
+[ext_resource type="PackedScene" uid="uid://bqupabvt8fl3b" path="res://Scenes/Characters/GrandPa.tscn" id="2_hbhju"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_us8qp"]
+vertices = PackedVector2Array(1554.41, 289.063, 1480.41, 772.008, 593.422, 773.992, 492.93, 663.07, 487.094, 345.25, 743.102, 172.961, 1446.49, 165.047)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(740, 163, 477, 340, 483, 667, 589, 784, 1489, 782, 1565, 286, 1451, 155)])
+
+[node name="TestMap" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_kqvq4")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+y_sort_enabled = true
+navigation_polygon = SubResource("NavigationPolygon_us8qp")
+
+[node name="Doctor" parent="NavigationRegion2D" instance=ExtResource("1_i1cgf")]
+position = Vector2(900, 573)
+
+[node name="GrandPa" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") groups=["Enemy"] instance=ExtResource("2_hbhju")]
+position = Vector2(1080, 572)
+target_to_chase = NodePath("../Doctor")

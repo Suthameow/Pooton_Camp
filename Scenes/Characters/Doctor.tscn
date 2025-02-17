@@ -690,7 +690,7 @@ tracks/49/keys = {
 tracks/50/type = "value"
 tracks/50/imported = false
 tracks/50/enabled = true
-tracks/50/path = NodePath("Marker2D/HitBox/CollisionLeftFist:disabled")
+tracks/50/path = NodePath("Marker2D/Punch/CollisionLeftFist:disabled")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
@@ -702,7 +702,7 @@ tracks/50/keys = {
 tracks/51/type = "value"
 tracks/51/imported = false
 tracks/51/enabled = true
-tracks/51/path = NodePath("Marker2D/HitBox/CollisionRightFist:disabled")
+tracks/51/path = NodePath("Marker2D/Punch/CollisionRightFist:disabled")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
@@ -714,7 +714,7 @@ tracks/51/keys = {
 tracks/52/type = "value"
 tracks/52/imported = false
 tracks/52/enabled = true
-tracks/52/path = NodePath("Marker2D/HitBox/CollisionRightFoot:disabled")
+tracks/52/path = NodePath("Marker2D/Kick/CollisionRightFoot:disabled")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
@@ -726,7 +726,7 @@ tracks/52/keys = {
 tracks/53/type = "value"
 tracks/53/imported = false
 tracks/53/enabled = true
-tracks/53/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:disabled")
+tracks/53/path = NodePath("Marker2D/Kick/CollisionLeftFoot:disabled")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
@@ -738,7 +738,7 @@ tracks/53/keys = {
 tracks/54/type = "value"
 tracks/54/imported = false
 tracks/54/enabled = true
-tracks/54/path = NodePath("Marker2D/HitBox/CollisionRightFist:position")
+tracks/54/path = NodePath("Marker2D/Punch/CollisionRightFist:position")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
@@ -750,7 +750,7 @@ tracks/54/keys = {
 tracks/55/type = "value"
 tracks/55/imported = false
 tracks/55/enabled = true
-tracks/55/path = NodePath("Marker2D/HitBox/CollisionLeftFist:position")
+tracks/55/path = NodePath("Marker2D/Punch/CollisionLeftFist:position")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
@@ -762,7 +762,7 @@ tracks/55/keys = {
 tracks/56/type = "value"
 tracks/56/imported = false
 tracks/56/enabled = true
-tracks/56/path = NodePath("Marker2D/HitBox/CollisionRightFoot:position")
+tracks/56/path = NodePath("Marker2D/Kick/CollisionRightFoot:position")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
@@ -774,7 +774,7 @@ tracks/56/keys = {
 tracks/57/type = "value"
 tracks/57/imported = false
 tracks/57/enabled = true
-tracks/57/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:position")
+tracks/57/path = NodePath("Marker2D/Kick/CollisionLeftFoot:position")
 tracks/57/interp = 1
 tracks/57/loop_wrap = true
 tracks/57/keys = {
@@ -822,7 +822,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.333333, 0.666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-4.75, -39), Vector2(-8.01, -35.825), Vector2(-4.75, -39)]
+"values": [Vector2(-4.75, -39), Vector2(-11.97, -35.825), Vector2(-4.75, -39)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1146,7 +1146,7 @@ tracks/29/keys = {
 "times": PackedFloat32Array(0, 0.333333, 0.666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(10.585, 5), Vector2(13.085, 2.415), Vector2(10.585, 5)]
+"values": [Vector2(10.585, 5), Vector2(14.4, 2.415), Vector2(10.585, 5)]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
@@ -1170,7 +1170,7 @@ tracks/31/keys = {
 "times": PackedFloat32Array(0, 0.333333, 0.666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(6, 9), Vector2(6, 9), Vector2(6, 9)]
+"values": [Vector2(6, 9), Vector2(5.55, 11.575), Vector2(6, 9)]
 }
 tracks/32/type = "value"
 tracks/32/imported = false
@@ -1194,7 +1194,7 @@ tracks/33/keys = {
 "times": PackedFloat32Array(0, 0.333333, 0.666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(14.8179, 20.8229), Vector2(16.353, 21.918), Vector2(14.8179, 20.8229)]
+"values": [Vector2(14.8179, 20.8229), Vector2(16.878, 23.293), Vector2(14.8179, 20.8229)]
 }
 tracks/34/type = "value"
 tracks/34/imported = false
@@ -1206,7 +1206,7 @@ tracks/34/keys = {
 "times": PackedFloat32Array(0, 0.333333, 0.666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.6353, 0.315905, -0.6353]
+"values": [-0.6353, 0.534071, -0.6353]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
@@ -1355,7 +1355,7 @@ tracks/46/keys = {
 tracks/47/type = "value"
 tracks/47/imported = false
 tracks/47/enabled = true
-tracks/47/path = NodePath("Marker2D/HitBox/CollisionRightFist:disabled")
+tracks/47/path = NodePath("Marker2D/Punch/CollisionRightFist:disabled")
 tracks/47/interp = 1
 tracks/47/loop_wrap = true
 tracks/47/keys = {
@@ -1367,7 +1367,7 @@ tracks/47/keys = {
 tracks/48/type = "value"
 tracks/48/imported = false
 tracks/48/enabled = true
-tracks/48/path = NodePath("Marker2D/HitBox/CollisionLeftFist:disabled")
+tracks/48/path = NodePath("Marker2D/Punch/CollisionLeftFist:disabled")
 tracks/48/interp = 1
 tracks/48/loop_wrap = true
 tracks/48/keys = {
@@ -1379,7 +1379,7 @@ tracks/48/keys = {
 tracks/49/type = "value"
 tracks/49/imported = false
 tracks/49/enabled = true
-tracks/49/path = NodePath("Marker2D/HitBox/CollisionRightFoot:disabled")
+tracks/49/path = NodePath("Marker2D/Kick/CollisionRightFoot:disabled")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
@@ -1391,7 +1391,7 @@ tracks/49/keys = {
 tracks/50/type = "value"
 tracks/50/imported = false
 tracks/50/enabled = true
-tracks/50/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:disabled")
+tracks/50/path = NodePath("Marker2D/Kick/CollisionLeftFoot:disabled")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
@@ -1403,26 +1403,26 @@ tracks/50/keys = {
 tracks/51/type = "value"
 tracks/51/imported = false
 tracks/51/enabled = true
-tracks/51/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:rotation")
+tracks/51/path = NodePath("Marker2D/Kick/CollisionLeftFoot:rotation")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
 "times": PackedFloat32Array(0, 0.166667, 0.25, 0.333333, 0.416667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0, 0.933751, 0.645772, 0.0]
+"values": [0.0, 0.0, -2.04204, 0.890118, 0.0]
 }
 tracks/52/type = "value"
 tracks/52/imported = false
 tracks/52/enabled = true
-tracks/52/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:position")
+tracks/52/path = NodePath("Marker2D/Kick/CollisionLeftFoot:position")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
 "times": PackedFloat32Array(0, 0.166667, 0.25, 0.333333, 0.416667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(53, 14), Vector2(54, -4), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(56, 17), Vector2(59.07, -3.565), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_i7u7h"]
@@ -2008,7 +2008,7 @@ tracks/47/keys = {
 tracks/48/type = "value"
 tracks/48/imported = false
 tracks/48/enabled = true
-tracks/48/path = NodePath("Marker2D/HitBox/CollisionRightFist:position")
+tracks/48/path = NodePath("Marker2D/Punch/CollisionRightFist:position")
 tracks/48/interp = 1
 tracks/48/loop_wrap = true
 tracks/48/keys = {
@@ -2020,7 +2020,7 @@ tracks/48/keys = {
 tracks/49/type = "value"
 tracks/49/imported = false
 tracks/49/enabled = true
-tracks/49/path = NodePath("Marker2D/HitBox/CollisionRightFist:disabled")
+tracks/49/path = NodePath("Marker2D/Punch/CollisionRightFist:disabled")
 tracks/49/interp = 1
 tracks/49/loop_wrap = true
 tracks/49/keys = {
@@ -2032,7 +2032,7 @@ tracks/49/keys = {
 tracks/50/type = "value"
 tracks/50/imported = false
 tracks/50/enabled = true
-tracks/50/path = NodePath("Marker2D/HitBox/CollisionLeftFist:disabled")
+tracks/50/path = NodePath("Marker2D/Punch/CollisionLeftFist:disabled")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
@@ -2044,7 +2044,7 @@ tracks/50/keys = {
 tracks/51/type = "value"
 tracks/51/imported = false
 tracks/51/enabled = true
-tracks/51/path = NodePath("Marker2D/HitBox/CollisionLeftFist:position")
+tracks/51/path = NodePath("Marker2D/Punch/CollisionLeftFist:position")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
@@ -2056,7 +2056,7 @@ tracks/51/keys = {
 tracks/52/type = "value"
 tracks/52/imported = false
 tracks/52/enabled = true
-tracks/52/path = NodePath("Marker2D/HitBox/CollisionRightFoot:disabled")
+tracks/52/path = NodePath("Marker2D/Kick/CollisionRightFoot:disabled")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
@@ -2068,7 +2068,7 @@ tracks/52/keys = {
 tracks/53/type = "value"
 tracks/53/imported = false
 tracks/53/enabled = true
-tracks/53/path = NodePath("Marker2D/HitBox/CollisionRightFoot:position")
+tracks/53/path = NodePath("Marker2D/Kick/CollisionRightFoot:position")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
@@ -2080,7 +2080,7 @@ tracks/53/keys = {
 tracks/54/type = "value"
 tracks/54/imported = false
 tracks/54/enabled = true
-tracks/54/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:disabled")
+tracks/54/path = NodePath("Marker2D/Kick/CollisionLeftFoot:disabled")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
@@ -2092,7 +2092,7 @@ tracks/54/keys = {
 tracks/55/type = "value"
 tracks/55/imported = false
 tracks/55/enabled = true
-tracks/55/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:position")
+tracks/55/path = NodePath("Marker2D/Kick/CollisionLeftFoot:position")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
@@ -2709,7 +2709,7 @@ tracks/49/keys = {
 tracks/50/type = "value"
 tracks/50/imported = false
 tracks/50/enabled = true
-tracks/50/path = NodePath("Marker2D/HitBox/CollisionRightFist:disabled")
+tracks/50/path = NodePath("Marker2D/Punch/CollisionRightFist:disabled")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
@@ -2721,7 +2721,7 @@ tracks/50/keys = {
 tracks/51/type = "value"
 tracks/51/imported = false
 tracks/51/enabled = true
-tracks/51/path = NodePath("Marker2D/HitBox/CollisionLeftFist:disabled")
+tracks/51/path = NodePath("Marker2D/Punch/CollisionLeftFist:disabled")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
@@ -2733,7 +2733,7 @@ tracks/51/keys = {
 tracks/52/type = "value"
 tracks/52/imported = false
 tracks/52/enabled = true
-tracks/52/path = NodePath("Marker2D/HitBox/CollisionRightFoot:disabled")
+tracks/52/path = NodePath("Marker2D/Kick/CollisionRightFoot:disabled")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
@@ -2745,7 +2745,7 @@ tracks/52/keys = {
 tracks/53/type = "value"
 tracks/53/imported = false
 tracks/53/enabled = true
-tracks/53/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:disabled")
+tracks/53/path = NodePath("Marker2D/Kick/CollisionLeftFoot:disabled")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
@@ -2757,7 +2757,7 @@ tracks/53/keys = {
 tracks/54/type = "value"
 tracks/54/imported = false
 tracks/54/enabled = true
-tracks/54/path = NodePath("Marker2D/HitBox/CollisionRightFist:position")
+tracks/54/path = NodePath("Marker2D/Punch/CollisionRightFist:position")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
@@ -2769,7 +2769,7 @@ tracks/54/keys = {
 tracks/55/type = "value"
 tracks/55/imported = false
 tracks/55/enabled = true
-tracks/55/path = NodePath("Marker2D/HitBox/CollisionLeftFist:position")
+tracks/55/path = NodePath("Marker2D/Punch/CollisionLeftFist:position")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
@@ -2781,7 +2781,7 @@ tracks/55/keys = {
 tracks/56/type = "value"
 tracks/56/imported = false
 tracks/56/enabled = true
-tracks/56/path = NodePath("Marker2D/HitBox/CollisionRightFoot:position")
+tracks/56/path = NodePath("Marker2D/Kick/CollisionRightFoot:position")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
@@ -2793,7 +2793,7 @@ tracks/56/keys = {
 tracks/57/type = "value"
 tracks/57/imported = false
 tracks/57/enabled = true
-tracks/57/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:position")
+tracks/57/path = NodePath("Marker2D/Kick/CollisionLeftFoot:position")
 tracks/57/interp = 1
 tracks/57/loop_wrap = true
 tracks/57/keys = {
@@ -2805,7 +2805,7 @@ tracks/57/keys = {
 tracks/58/type = "value"
 tracks/58/imported = false
 tracks/58/enabled = true
-tracks/58/path = NodePath("Marker2D/HitBox/CollisionRightFoot:rotation")
+tracks/58/path = NodePath("Marker2D/Kick/CollisionRightFoot:rotation")
 tracks/58/interp = 1
 tracks/58/loop_wrap = true
 tracks/58/keys = {
@@ -2817,7 +2817,7 @@ tracks/58/keys = {
 tracks/59/type = "value"
 tracks/59/imported = false
 tracks/59/enabled = true
-tracks/59/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:rotation")
+tracks/59/path = NodePath("Marker2D/Kick/CollisionLeftFoot:rotation")
 tracks/59/interp = 1
 tracks/59/loop_wrap = true
 tracks/59/keys = {
@@ -3435,7 +3435,7 @@ tracks/49/keys = {
 tracks/50/type = "value"
 tracks/50/imported = false
 tracks/50/enabled = true
-tracks/50/path = NodePath("Marker2D/HitBox/CollisionRightFist:disabled")
+tracks/50/path = NodePath("Marker2D/Punch/CollisionRightFist:disabled")
 tracks/50/interp = 1
 tracks/50/loop_wrap = true
 tracks/50/keys = {
@@ -3447,7 +3447,7 @@ tracks/50/keys = {
 tracks/51/type = "value"
 tracks/51/imported = false
 tracks/51/enabled = true
-tracks/51/path = NodePath("Marker2D/HitBox/CollisionLeftFist:disabled")
+tracks/51/path = NodePath("Marker2D/Punch/CollisionLeftFist:disabled")
 tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = {
@@ -3459,7 +3459,7 @@ tracks/51/keys = {
 tracks/52/type = "value"
 tracks/52/imported = false
 tracks/52/enabled = true
-tracks/52/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:disabled")
+tracks/52/path = NodePath("Marker2D/Kick/CollisionLeftFoot:disabled")
 tracks/52/interp = 1
 tracks/52/loop_wrap = true
 tracks/52/keys = {
@@ -3471,7 +3471,7 @@ tracks/52/keys = {
 tracks/53/type = "value"
 tracks/53/imported = false
 tracks/53/enabled = true
-tracks/53/path = NodePath("Marker2D/HitBox/CollisionRightFoot:disabled")
+tracks/53/path = NodePath("Marker2D/Kick/CollisionRightFoot:disabled")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
@@ -3483,7 +3483,7 @@ tracks/53/keys = {
 tracks/54/type = "value"
 tracks/54/imported = false
 tracks/54/enabled = true
-tracks/54/path = NodePath("Marker2D/HitBox/CollisionRightFist:position")
+tracks/54/path = NodePath("Marker2D/Punch/CollisionRightFist:position")
 tracks/54/interp = 1
 tracks/54/loop_wrap = true
 tracks/54/keys = {
@@ -3495,7 +3495,7 @@ tracks/54/keys = {
 tracks/55/type = "value"
 tracks/55/imported = false
 tracks/55/enabled = true
-tracks/55/path = NodePath("Marker2D/HitBox/CollisionLeftFist:position")
+tracks/55/path = NodePath("Marker2D/Punch/CollisionLeftFist:position")
 tracks/55/interp = 1
 tracks/55/loop_wrap = true
 tracks/55/keys = {
@@ -3507,7 +3507,7 @@ tracks/55/keys = {
 tracks/56/type = "value"
 tracks/56/imported = false
 tracks/56/enabled = true
-tracks/56/path = NodePath("Marker2D/HitBox/CollisionRightFoot:rotation")
+tracks/56/path = NodePath("Marker2D/Kick/CollisionRightFoot:rotation")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
@@ -3519,7 +3519,7 @@ tracks/56/keys = {
 tracks/57/type = "value"
 tracks/57/imported = false
 tracks/57/enabled = true
-tracks/57/path = NodePath("Marker2D/HitBox/CollisionLeftFoot:rotation")
+tracks/57/path = NodePath("Marker2D/Kick/CollisionLeftFoot:rotation")
 tracks/57/interp = 1
 tracks/57/loop_wrap = true
 tracks/57/keys = {
@@ -3546,7 +3546,7 @@ metadata/_edit_horizontal_guides_ = [48.0]
 metadata/_edit_vertical_guides_ = [60.0]
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -40)
+position = Vector2(0, -48)
 
 [node name="Body" type="Sprite2D" parent="Marker2D"]
 position = Vector2(0, -2)
@@ -3676,34 +3676,38 @@ position = Vector2(-14.8092, 17.481)
 texture = SubResource("AtlasTexture_5ropg")
 offset = Vector2(2.445, -6.215)
 
-[node name="HitBox" type="Area2D" parent="Marker2D"]
+[node name="Punch" type="Area2D" parent="Marker2D"]
 collision_layer = 512
 collision_mask = 4096
 
-[node name="CollisionRightFist" type="CollisionShape2D" parent="Marker2D/HitBox"]
+[node name="CollisionRightFist" type="CollisionShape2D" parent="Marker2D/Punch"]
 position = Vector2(55, -27)
 shape = SubResource("CircleShape2D_psn37")
 disabled = true
 debug_color = Color(0.902871, 0.30802, 0, 0.42)
 
-[node name="CollisionLeftFist" type="CollisionShape2D" parent="Marker2D/HitBox"]
+[node name="CollisionLeftFist" type="CollisionShape2D" parent="Marker2D/Punch"]
 shape = SubResource("CircleShape2D_psn37")
 disabled = true
 debug_color = Color(0.902871, 0.30802, 0, 0.42)
 
-[node name="CollisionRightFoot" type="CollisionShape2D" parent="Marker2D/HitBox"]
+[node name="Kick" type="Area2D" parent="Marker2D"]
+collision_layer = 1024
+collision_mask = 4096
+
+[node name="CollisionRightFoot" type="CollisionShape2D" parent="Marker2D/Kick"]
 position = Vector2(13, 45)
 shape = SubResource("CapsuleShape2D_n5enr")
 disabled = true
 debug_color = Color(0.901961, 0.309804, 0, 0.419608)
 
-[node name="CollisionLeftFoot" type="CollisionShape2D" parent="Marker2D/HitBox"]
+[node name="CollisionLeftFoot" type="CollisionShape2D" parent="Marker2D/Kick"]
 shape = SubResource("CapsuleShape2D_4ymvk")
 disabled = true
 debug_color = Color(0.901961, 0.309804, 0, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -4)
+position = Vector2(2, -12)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_v5mga")
 
@@ -3711,3 +3715,4 @@ shape = SubResource("CapsuleShape2D_v5mga")
 libraries = {
 "": SubResource("AnimationLibrary_qjbww")
 }
+autoplay = "Idle"

@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c4mpia10isl2n"]
+
+[ext_resource type="FontFile" uid="uid://c31xefx26850c" path="res://Fonts/Mali/Mali-Regular.ttf" id="1_h35cu"]
+[ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI_1024.png" id="2_nge38"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uy4c"]
+atlas = ExtResource("2_nge38")
+region = Rect2(896, 960, 128, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_okidl"]
+texture = SubResource("AtlasTexture_7uy4c")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 24.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnmvu"]
+atlas = ExtResource("2_nge38")
+region = Rect2(896, 960, 128, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3ot4"]
+texture = SubResource("AtlasTexture_hnmvu")
+texture_margin_left = 32.0
+texture_margin_top = 24.0
+texture_margin_right = 32.0
+texture_margin_bottom = 24.0
+axis_stretch_horizontal = 2
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_h35cu")
+Panel/styles/panel = SubResource("StyleBoxTexture_okidl")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_h3ot4")

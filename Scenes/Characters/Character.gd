@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(velocity * delta * PlayerData.run_speed)
 
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Hit"):
 		sprite_action = true
 		$AnimationPlayer.play("Punch")
