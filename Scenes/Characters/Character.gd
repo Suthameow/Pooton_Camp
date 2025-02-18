@@ -15,7 +15,7 @@ func _ready() -> void:
 # Make an Action RPG in Godot 3.2 - https://www.youtube.com/watch?v=EQA9MJ5_TxU&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a&index=2
 # Make an action RPG in Godot 4 - https://www.youtube.com/watch?v=aixZT_e8xsk&list=PLzp-pJarR3ar6OSfunTB2Qpwx9fl3Pxbg&index=12
 # animatedSprite2D + Melee attacking - https://www.youtube.com/watch?v=q0WHhsmifkQ
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	# Controling - character movement
 	var input_vector : Vector2 = Vector2.ZERO

@@ -33,7 +33,7 @@ func calculate_damage(base_damage:int, weapon_damage:int, base_defense:int, cost
 
 func display_damage(value : int, position : Vector2):
 	var number = DAMAGE_NO.instantiate()
-	number.global_position = position
+	number.global_position = position - Vector2(number.size / 2)
 	number.text = str(value)
 	number.pivot_offset = Vector2(number.size / 2)
 	

@@ -10,6 +10,7 @@ const grandpa_speed : int = 20
 var speed : int
 var target_in_range : bool = false
 var punch_quest : int = 10
+var attackable : bool
 
 func _ready() -> void:
 	set_physics_process(false)
@@ -40,27 +41,34 @@ func _physics_process(_delta: float) -> void:
 	else:
 		$Marker2D.scale.x = 1
 	
+	##### UI Attackable
+	if abs(target_to_chase.global_position.y - self.global_position.y) <= 8 :
+		$Marker2D/Attackable.visible = true
+		attackable = true
+	else: 
+		$Marker2D/Attackable.visible = false
+		attackable = false
+
 
 
 
 func _on_hurt_box_area_entered(_area: Area2D) -> void:
 	var damage = Global.calculate_damage(PlayerData.attack_melee, 0, PlayerData.defense, 0)
 	
-	Global.display_damage(damage, $Damage_no.global_position)
-	Global.display_dialoque(tr(Global.dialoque_array[randi_range(0, Global.dialoque_array.size()-1)]), 0.75, $Bubble_path)
-	
-	if punch_quest > 0:
-		punch_quest -= 1
+	if attackable == true:
+		Global.display_damage(damage, $Marker2D/BoxingPads/Padding.global_position)
+		Global.display_dialoque(tr(Global.dialoque_array[randi_range(0, Global.dialoque_array.size()-1)]), 0.75, $Bubble_path)
+			
+		if punch_quest > 0:
+			punch_quest -= 1
 
 
 func _on_nuts_box_area_entered(_area: Area2D) -> void:
-	
-	$AnimationPlayer.play("Kick_Nut")
-	Global.display_dialoque(tr("GRANDPAHURT"), 0.75, $Bubble_path)
-	await  $AnimationPlayer.animation_finished
-	$AnimationPlayer.play("PunchPad")
-
-
+	if attackable == true:
+		$AnimationPlayer.play("Kick_Nut")
+		Global.display_dialoque(tr("GRANDPAHURT"), 0.75, $Bubble_path)
+		await  $AnimationPlayer.animation_finished
+		$AnimationPlayer.play("PunchPad")
 
 
 func _on_area_detection_body_entered(body: Node2D) -> void:
