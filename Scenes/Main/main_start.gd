@@ -3,7 +3,7 @@ extends Control
 
 var user_setting : UserSetting
 var set_language = ["en", "cn", "th", "fr", "de", ] # Same order as user_setting.gd
-var mainGame : PackedScene = preload("res://Scenes/Levels/test_map.tscn")
+var mainGame : PackedScene = preload("res://Scenes/Levels/Gym.tscn")
 
 
 func _ready() -> void:
