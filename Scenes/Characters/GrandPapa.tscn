@@ -1,15 +1,16 @@
-[gd_scene load_steps=38 format=3 uid="uid://ky2exjwqwa01"]
+[gd_scene load_steps=39 format=3 uid="uid://ky2exjwqwa01"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/GrandPa.gd" id="1_piwiu"]
 [ext_resource type="Texture2D" uid="uid://ddnmg8ddv7c2h" path="res://Images/Characters/GrandPapa.png" id="1_vk002"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukifn"]
-atlas = ExtResource("1_vk002")
-region = Rect2(192, 64, 64, 32)
+[ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_2q3ev"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ricbe"]
 atlas = ExtResource("1_vk002")
 region = Rect2(192, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukifn"]
+atlas = ExtResource("2_2q3ev")
+region = Rect2(960, 928, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83pkp"]
 atlas = ExtResource("1_vk002")
@@ -2678,17 +2679,17 @@ script = ExtResource("1_piwiu")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -46)
 
-[node name="Attackable" type="Sprite2D" parent="Marker2D"]
-self_modulate = Color(1, 0, 0, 0.392157)
-position = Vector2(0, 46)
-scale = Vector2(1.2, 1)
-texture = SubResource("AtlasTexture_ukifn")
-
 [node name="Shadow" type="Sprite2D" parent="Marker2D"]
 self_modulate = Color(0, 0, 0, 0.627451)
 position = Vector2(0, 46)
 scale = Vector2(1, 0.8)
 texture = SubResource("AtlasTexture_ricbe")
+
+[node name="Attackable" type="Sprite2D" parent="Marker2D"]
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(0, 46)
+scale = Vector2(1.25, 1.1)
+texture = SubResource("AtlasTexture_ukifn")
 
 [node name="Body" type="Sprite2D" parent="Marker2D"]
 self_modulate = Color(0.75, 0.67125, 0.615, 1)
