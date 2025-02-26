@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://chy3vs3youdw0"]
+[gd_scene load_steps=5 format=3 uid="uid://chy3vs3youdw0"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main_start.gd" id="1_ghajp"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_et3jv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs2yn"]
+atlas = ExtResource("2_et3jv")
+region = Rect2(800, 928, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc1qm"]
 atlas = ExtResource("2_et3jv")
@@ -16,46 +20,89 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ghajp")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_xs2yn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -26.5
-offset_bottom = 26.5
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 32
-alignment = 1
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 128
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Pooton Camp"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 120)
+[node name="Menu" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Menu"]
+custom_minimum_size = Vector2(400, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
-text = "Run"
+text = "Start"
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/Menu"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Menu"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Setting
+"
+
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/Menu"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Credit
+"
+
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/Menu"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Exit
+"
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/Menu"]
+visible = false
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = SubResource("AtlasTexture_fc1qm")
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Menu/Button" to="." method="_on_button_pressed"]
