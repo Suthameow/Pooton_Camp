@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb42ik0ta0a7b"]
+[gd_scene load_steps=6 format=3 uid="uid://cb42ik0ta0a7b"]
 
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="1_ndh55"]
-[ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/Doctor.tscn" id="2_0nqo3"]
+[ext_resource type="Script" path="res://Scenes/Main/character_selection.gd" id="1_t05x6"]
 [ext_resource type="Theme" uid="uid://b8ijxab5wx82h" path="res://Images/Theme/th_UI.tres" id="2_l78st"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0vvx7"]
+atlas = ExtResource("1_ndh55")
+region = Rect2(800, 928, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yajo"]
 atlas = ExtResource("1_ndh55")
 region = Rect2(800, 928, 64, 64)
 
@@ -15,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t05x6")
 
 [node name="Background" type="TextureRect" parent="."]
 self_modulate = Color(0.252028, 0.252028, 0.252028, 1)
@@ -26,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_0vvx7")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,208 +43,83 @@ theme_override_constants/margin_top = 128
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 128
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBox" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
 theme = ExtResource("2_l78st")
 theme_override_constants/separation = 64
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Header" type="Label" parent="Margin/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Character Selection"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBox" type="HBoxContainer" parent="Margin/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 64
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(904, 0)
+[node name="CharacterList" type="GridContainer" parent="Margin/VBox/HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(864, 676)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 32
 columns = 4
 
-[node name="Character_Panel" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(220, 320)
-layout_mode = 2
-theme = ExtResource("2_l78st")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel/VBoxContainer"]
-custom_minimum_size = Vector2(220, 250)
-layout_mode = 2
-
-[node name="Doctor" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel/VBoxContainer/Control" instance=ExtResource("2_0nqo3")]
-position = Vector2(110, 240)
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel/VBoxContainer"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Doctor"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Character_Panel2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(220, 320)
-layout_mode = 2
-theme = ExtResource("2_l78st")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel2/VBoxContainer"]
-custom_minimum_size = Vector2(220, 250)
-layout_mode = 2
-
-[node name="Doctor" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel2/VBoxContainer/Control" instance=ExtResource("2_0nqo3")]
-position = Vector2(110, 240)
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel2/VBoxContainer"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Doctor"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Character_Panel3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(220, 320)
-layout_mode = 2
-theme = ExtResource("2_l78st")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel3/VBoxContainer"]
-custom_minimum_size = Vector2(220, 250)
-layout_mode = 2
-
-[node name="Doctor" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel3/VBoxContainer/Control" instance=ExtResource("2_0nqo3")]
-position = Vector2(110, 240)
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel3/VBoxContainer"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Doctor"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Character_Panel4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(220, 320)
-layout_mode = 2
-theme = ExtResource("2_l78st")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel4/VBoxContainer"]
-custom_minimum_size = Vector2(220, 250)
-layout_mode = 2
-
-[node name="Doctor" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel4/VBoxContainer/Control" instance=ExtResource("2_0nqo3")]
-position = Vector2(110, 240)
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel4/VBoxContainer"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Doctor"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Character_Panel5" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(220, 320)
-layout_mode = 2
-theme = ExtResource("2_l78st")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel5"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel5/VBoxContainer"]
-custom_minimum_size = Vector2(220, 250)
-layout_mode = 2
-
-[node name="Doctor" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel5/VBoxContainer/Control" instance=ExtResource("2_0nqo3")]
-position = Vector2(110, 240)
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/Character_Panel5/VBoxContainer"]
-self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Doctor"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Info" type="VBoxContainer" parent="Margin/VBox/HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(864, 676)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Container"]
+[node name="JobName" type="Label" parent="Margin/VBox/HBox/Info"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Lorem Ipsum"
 uppercase = true
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Container"]
+[node name="Slogan" type="Label" parent="Margin/VBox/HBox/Info"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "\"Lorem Ipsum Lorem Ipsum\""
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Container"]
+[node name="Detail" type="RichTextLabel" parent="Margin/VBox/HBox/Info"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Container"]
+[node name="Motto" type="Label" parent="Margin/VBox/HBox/Info"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "\"Lorem Ipsum Lorem Ipsum\""
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Container"]
+[node name="Start" type="Button" parent="Margin/VBox/HBox/Info"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
+disabled = true
 text = "START"
+
+[node name="Background" type="TextureRect" parent="Margin/VBox/HBox/Info/Start"]
+self_modulate = Color(1, 1, 1, 0.392157)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_5yajo")
+expand_mode = 1
+stretch_mode = 1
+
+[connection signal="pressed" from="Margin/VBox/HBox/Info/Start" to="." method="_on_start_pressed"]

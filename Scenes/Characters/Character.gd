@@ -28,7 +28,7 @@ func _physics_process(_delta: float) -> void:
 			velocity = velocity.move_toward(Vector2.ZERO, friction ) # a little bit slide.
 		else:
 			velocity += input_vector * acceleration
-			velocity = velocity.limit_length(PlayerData.run_speed ) * Vector2(1, 0.7071) # limit_length = setup the ceiling number.
+			velocity = velocity.limit_length(Global.MAIN_DATA.CharacterList[0].run_speed) * Vector2(1, 0.7071) # limit_length = setup the ceiling number.
 			if input_vector.x >= 0: # Move to the right | Turn right
 				$Marker2D.scale.x = 1
 				$AnimationPlayer.play("Run")

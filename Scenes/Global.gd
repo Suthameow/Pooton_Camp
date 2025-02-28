@@ -1,10 +1,20 @@
 # _Global.gd
 extends Node
+#####  %APPDATA%\Godot\app_userdata\Pooton Camp
 
 
-var saved_game = "user://playerSave.res"
-var language_setting : int = 0 # ("en", "cn", "th", "fr", "de")
-signal language_change
+##### Resources ################################################################
+var MAIN_DATA : Main = preload("res://Resources/MainData.tres") # Main infomation
+
+##### Setting ##################################################################
+var saved_game = "user://save/playerSave.res"
+var playerData = PlayerData
+
+
+##### Character List
+signal character_selected
+
+
 
 ##### Theme
 const EN_BUBBLE = preload("res://Images/Theme/en_Bubble.tres")
@@ -18,7 +28,25 @@ const resistance : int = 100
 
 var dialoque_array = ["GRANDPA1", "GRANDPA2", "GRANDPA3", "GRANDPA4", "GRANDPA5", "GRANDPA6", "GRANDPA7", "GRANDPA8", "GRANDPA9", "GRANDPA10"]
 
+func _ready() -> void:
+	user_setting = UserSetting.load_or_create()
 
+##### Langauge #################################################################
+var language_setting : int = 0 # ("en", "cn", "th")
+var user_setting : UserSetting
+var set_language_index = ["en", "cn", "th"] # Same order as user_setting.gd
+
+func set_localization(language_index) -> void:
+	# language_setting = user_setting.language 
+	language_setting = language_index # Update current Language index
+	user_setting.language = language_index # Set Language in user_setting var language : int : enum("en", "cn", "th")
+	
+	TranslationServer.set_locale(set_language_index[user_setting.language])
+	
+	
+
+
+#####  #########################################################################
 func clear_node(path : Node):
 	for child in path.get_children(): # Clear everything in the inventory first / Empty before reload
 		path.remove_child(child)

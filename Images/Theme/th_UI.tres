@@ -1,12 +1,37 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b8ijxab5wx82h"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://b8ijxab5wx82h"]
 
 [ext_resource type="FontFile" uid="uid://bngj84ep1o6y" path="res://Fonts/Mali/Mali-SemiBold.ttf" id="1_28bok"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_1k1a2"]
 [ext_resource type="FontFile" uid="uid://c31xefx26850c" path="res://Fonts/Mali/Mali-Regular.ttf" id="2_iaxxq"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_koxnv"]
+atlas = ExtResource("2_1k1a2")
+region = Rect2(896, 768, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_040bv"]
+texture = SubResource("AtlasTexture_koxnv")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rd2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xjvw"]
+atlas = ExtResource("2_1k1a2")
+region = Rect2(768, 768, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_63k4a"]
+texture = SubResource("AtlasTexture_5xjvw")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+modulate_color = Color(0.6, 0.215, 0.18, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6tru"]
 atlas = ExtResource("2_1k1a2")
-region = Rect2(768, 704, 256, 64)
+region = Rect2(896, 768, 128, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_racwy"]
 texture = SubResource("AtlasTexture_w6tru")
@@ -15,11 +40,28 @@ texture_margin_top = 16.0
 texture_margin_right = 16.0
 texture_margin_bottom = 16.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbo7b"]
+atlas = ExtResource("2_1k1a2")
+region = Rect2(768, 768, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4aw6l"]
+texture = SubResource("AtlasTexture_kbo7b")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+modulate_color = Color(0.9, 0.73125, 0.225, 1)
+
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 0
 Button/font_sizes/font_size = 54
 Button/fonts/font = ExtResource("1_28bok")
+Button/styles/disabled = SubResource("StyleBoxTexture_040bv")
+Button/styles/focus = SubResource("StyleBoxEmpty_4rd2g")
+Button/styles/hover = SubResource("StyleBoxTexture_63k4a")
 Button/styles/normal = SubResource("StyleBoxTexture_racwy")
+Button/styles/pressed = SubResource("StyleBoxTexture_4aw6l")
 Label/fonts/font = ExtResource("1_28bok")
 RichTextLabel/font_sizes/bold_font_size = 32
 RichTextLabel/font_sizes/normal_font_size = 26

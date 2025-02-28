@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://dr3c7s2k8xal1"]
+
+[ext_resource type="PackedScene" uid="uid://ba82nhwyrwqml" path="res://Scenes/Characters/DoctorStatic.tscn" id="1_h1rbw"]
+[ext_resource type="Script" path="res://Resources/CharacterData/res_CharacterData.gd" id="1_pg3pc"]
+
+[resource]
+script = ExtResource("1_pg3pc")
+unlocked = true
+character_scene = ExtResource("1_h1rbw")
+job = "DOCTOR"
+job_detail = "Doctor detail : xxxx xxx x x xxxx xxx xx xxxx xx x xxxxx xxxx xxx xxxx xxxxxx xxx xxxx xx x xxxx xxx xxx xxxx xxx x xxx x xxxx xxx x x xxxx xxx xx xxxx xx x xxxxx xxxx xxx xxxx xxxxxx xxx xxxx xx x xxxx xxx xxx xxxx xxx x xxx x xxxx xxx x x xxxx xxx xx xxxx xx x xxxxx xxxx xxx xxxx xxxxxx xxx xxxx xx x xxxx xxx xxx xxxx xxx x xxx x"
+slogan = "\"I can't fix stupid, but I can fix what stupid does.\""
+motto = "\"Your health is my duty, laughter is my medicine.\""
+health = 100
+max_health = 0
+attack_melee = 100
+attack_range = 100
+defense = 100
+accuracy = 0
+run_speed = 100

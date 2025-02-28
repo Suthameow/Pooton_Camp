@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://bchkhkax3sqcy"]
+
+[ext_resource type="PackedScene" uid="uid://ba82nhwyrwqml" path="res://Scenes/Characters/DoctorStatic.tscn" id="1_ounj6"]
+[ext_resource type="Script" path="res://Resources/CharacterData/res_CharacterData.gd" id="2_woab2"]
+
+[resource]
+script = ExtResource("2_woab2")
+unlocked = false
+character_scene = ExtResource("1_ounj6")
+job = "AGICULTURIST"
+job_detail = ""
+slogan = ""
+motto = ""
+health = 100
+max_health = 0
+attack_melee = 100
+attack_range = 100
+defense = 100
+accuracy = 0
+run_speed = 100

@@ -1,9 +1,10 @@
 extends Resource
-
 class_name UserSetting 
 
+#####  %APPDATA%\Godot\app_userdata\Pooton Camp
+
 @export_category("User Information")
-@export var username : String = "GardenerA"
+@export var username : String = "StudentA"
 
 
 @export_category("Audio")
@@ -13,23 +14,17 @@ class_name UserSetting
 @export_range(0, 1, 0.05) var ui_level : float = 1.0
 
 @export_category("Language")
-@export_enum("en", "cn", "th", "fr", "de") var language : int = 0
+@export_enum("en", "cn", "th") var language : int = 0
 
 
 func save() -> void : 
 	ResourceSaver.save(self, "user://user_setting.tres")
 
 
-#static func load_or_create() -> UserSetting :
-#	var res: UserSetting = load("user://user_setting.tres") as UserSetting
-#	if !res :
-#		res = UserSetting.new()
-#	return res
-
 static func load_or_create() -> UserSetting :
-	var res: UserSetting
+	var user_setting: UserSetting
 	if ResourceLoader.exists("user://user_setting.tres"): # found saved setting
-		res = load("user://user_setting.tres") as UserSetting # TRANSFER 
+		user_setting = load("user://user_setting.tres") as UserSetting # TRANSFER 
 	else:
-		res = UserSetting.new()
-	return res
+		user_setting = UserSetting.new()
+	return user_setting
