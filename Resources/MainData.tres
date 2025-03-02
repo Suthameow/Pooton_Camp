@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Main" load_steps=9 format=3 uid="uid://dxl022otmr2c4"]
+[gd_resource type="Resource" script_class="Main" load_steps=11 format=3 uid="uid://dxl022otmr2c4"]
 
 [ext_resource type="Script" path="res://Resources/res_MainData.gd" id="1_2amej"]
 [ext_resource type="Script" path="res://Resources/CharacterData/res_CharacterData.gd" id="1_bo7br"]
@@ -8,7 +8,9 @@
 [ext_resource type="Resource" uid="uid://figj5o7qejy2" path="res://Resources/CharacterData/Marketer.tres" id="5_rgkm7"]
 [ext_resource type="Resource" uid="uid://bchkhkax3sqcy" path="res://Resources/CharacterData/Agriculturist.tres" id="6_efyq8"]
 [ext_resource type="Resource" uid="uid://bw15yugwngcop" path="res://Resources/CharacterData/Programmer.tres" id="7_ymirn"]
+[ext_resource type="Resource" uid="uid://c3po5hm02prkn" path="res://Resources/CharacterData/Lawyer.tres" id="8_eb5pm"]
+[ext_resource type="Resource" uid="uid://bxgbgh76vg8kg" path="res://Resources/CharacterData/Veterinary.tres" id="9_idb3s"]
 
 [resource]
 script = ExtResource("1_2amej")
-CharacterList = Array[ExtResource("1_bo7br")]([ExtResource("2_4m65g"), ExtResource("3_dw5lb"), ExtResource("4_frsoi"), ExtResource("5_rgkm7"), ExtResource("6_efyq8"), ExtResource("7_ymirn")])
+CharacterList = Array[ExtResource("1_bo7br")]([ExtResource("2_4m65g"), ExtResource("3_dw5lb"), ExtResource("4_frsoi"), ExtResource("5_rgkm7"), ExtResource("6_efyq8"), ExtResource("7_ymirn"), ExtResource("8_eb5pm"), ExtResource("9_idb3s")])

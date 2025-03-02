@@ -23,13 +23,7 @@ func _ready() -> void:
 func scene_preparation() -> void:
 	Global.character_selected.emit(Global.MAIN_DATA.CharacterList[0]) # fill the Doctor infomation
 	%CharacterList.get_child(0).button_pressed = true
-	
-	#%Info/JobName.text = tr("")
-	#%Info/Slogan.text = tr("")
-	#%Info/Detail.text = tr("")
-	#%Info/Motto.text = tr("")
-	#
-	#%Start.disabled = true
+	print("ready")
 
 
 func populate_character() -> void:

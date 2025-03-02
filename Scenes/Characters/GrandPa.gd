@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var target_to_chase : CharacterBody2D
 
 
-const grandpa_speed : int = 20
+const grandpa_speed : int = 25
 var speed : int
 var target_in_range : bool = false
 var punch_quest : int = 10

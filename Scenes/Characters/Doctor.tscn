@@ -1432,10 +1432,10 @@ tracks/27/path = NodePath("Marker2D/Body/Arm_Right:position")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.416667, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-2.33707, -38.2562), Vector2(-0.782, -36.486), Vector2(4.243, -37.056), Vector2(-2.33707, -38.2562)]
+"values": [Vector2(-2.33707, -38.2562), Vector2(-0.782, -36.486), Vector2(8, -40), Vector2(3.581, -36.569), Vector2(-2.33707, -38.2562)]
 }
 tracks/28/type = "value"
 tracks/28/imported = false
@@ -1447,7 +1447,7 @@ tracks/28/keys = {
 "times": PackedFloat32Array(0, 0.166667, 0.333333, 0.666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-0.191986, 0.0733038, -2.39983, -0.191986]
+"values": [-0.191986, 0.0733038, -2.79253, -0.191986]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
@@ -1519,7 +1519,7 @@ tracks/34/keys = {
 "times": PackedFloat32Array(0, 0.166667, 0.25, 0.333333, 0.416667, 0.666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(29, -28), Vector2(46, -31), Vector2(0, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(29, -28), Vector2(48, -48), Vector2(0, 0), Vector2(0, 0)]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
@@ -2683,6 +2683,7 @@ _data = {
 [node name="Doctor" type="CharacterBody2D"]
 script = ExtResource("1_mn6da")
 metadata/_edit_vertical_guides_ = [52.0]
+metadata/_edit_horizontal_guides_ = [-80.0, -96.0]
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -50)

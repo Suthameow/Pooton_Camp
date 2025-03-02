@@ -458,6 +458,7 @@ target_to_chase = NodePath("../Doctor")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(-46, 0)
 polygon = PackedVector2Array(735, 349, 1266, 344, 1256, 378, 760, 380, 661, 628, 1339, 630, 1256, 378, 1266, 344, 1421, 627, 1417, 677, 587, 669, 586, 612)
 
