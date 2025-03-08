@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Main" load_steps=11 format=3 uid="uid://dxl022otmr2c4"]
 
-[ext_resource type="Script" path="res://Resources/res_MainData.gd" id="1_2amej"]
-[ext_resource type="Script" path="res://Resources/CharacterData/res_CharacterData.gd" id="1_bo7br"]
+[ext_resource type="Script" uid="uid://b5vqtjnoly2dv" path="res://Resources/res_MainData.gd" id="1_2amej"]
+[ext_resource type="Script" uid="uid://3kssw0cravbb" path="res://Resources/CharacterData/res_CharacterData.gd" id="1_bo7br"]
 [ext_resource type="Resource" uid="uid://dr3c7s2k8xal1" path="res://Resources/CharacterData/Doctor.tres" id="2_4m65g"]
 [ext_resource type="Resource" uid="uid://dv58xdf8le5id" path="res://Resources/CharacterData/Engineer.tres" id="3_dw5lb"]
 [ext_resource type="Resource" uid="uid://cqtpursnsigvb" path="res://Resources/CharacterData/Architect.tres" id="4_frsoi"]

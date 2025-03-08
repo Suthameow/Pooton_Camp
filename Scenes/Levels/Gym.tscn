@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=4 uid="uid://prtbbqy5doyc"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/Gym.gd" id="1_kqvq4"]
+[ext_resource type="Script" uid="uid://dvd37s8xjmw6h" path="res://Scenes/Levels/Gym.gd" id="1_kqvq4"]
 [ext_resource type="Texture2D" uid="uid://cfu2ai4q8bx00" path="res://Images/Levels/Gym_1024.png" id="2_6uhqn"]
 [ext_resource type="Texture2D" uid="uid://dce4am44rpdjr" path="res://Images/Levels/Atlas_Texture_Background.png" id="2_wfg3r"]
 [ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/Doctor.tscn" id="3_prnth"]

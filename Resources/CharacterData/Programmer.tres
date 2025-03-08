@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://bw15yugwngcop"]
 
 [ext_resource type="PackedScene" uid="uid://ba82nhwyrwqml" path="res://Scenes/Characters/DoctorStatic.tscn" id="1_liwje"]
-[ext_resource type="Script" path="res://Resources/CharacterData/res_CharacterData.gd" id="2_b5xw5"]
+[ext_resource type="Script" uid="uid://3kssw0cravbb" path="res://Resources/CharacterData/res_CharacterData.gd" id="2_b5xw5"]
 
 [resource]
 script = ExtResource("2_b5xw5")

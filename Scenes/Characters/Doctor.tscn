@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://w4swgoox677t"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Character.gd" id="1_mn6da"]
+[ext_resource type="Script" uid="uid://bsr0b75ae0x4n" path="res://Scenes/Characters/Character.gd" id="1_mn6da"]
 [ext_resource type="Texture2D" uid="uid://cwdt3c5ypyj6l" path="res://Images/Characters/Doctor_1024.png" id="1_sa5x0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6b8js"]
@@ -2673,11 +2673,11 @@ tracks/43/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hbmc4"]
 _data = {
-"Idle": SubResource("Animation_eind2"),
-"Kick": SubResource("Animation_pa12a"),
-"Punch": SubResource("Animation_cpjms"),
-"RESET": SubResource("Animation_bv6yn"),
-"Run": SubResource("Animation_061d7")
+&"Idle": SubResource("Animation_eind2"),
+&"Kick": SubResource("Animation_pa12a"),
+&"Punch": SubResource("Animation_cpjms"),
+&"RESET": SubResource("Animation_bv6yn"),
+&"Run": SubResource("Animation_061d7")
 }
 
 [node name="Doctor" type="CharacterBody2D"]
@@ -2847,6 +2847,6 @@ shape = SubResource("CapsuleShape2D_ckk63")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_hbmc4")
+&"": SubResource("AnimationLibrary_hbmc4")
 }
 autoplay = "Idle"

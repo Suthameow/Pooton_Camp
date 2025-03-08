@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://ky2exjwqwa01"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/GrandPa.gd" id="1_piwiu"]
+[ext_resource type="Script" uid="uid://5nxh41klyurv" path="res://Scenes/Characters/GrandPa.gd" id="1_piwiu"]
 [ext_resource type="Texture2D" uid="uid://ddnmg8ddv7c2h" path="res://Images/Characters/GrandPapa.png" id="1_vk002"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_2q3ev"]
 
@@ -2661,11 +2661,11 @@ tracks/41/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1yxd3"]
 _data = {
-"Idle": SubResource("Animation_1c01g"),
-"Kick_Nut": SubResource("Animation_2fp0u"),
-"PunchPad": SubResource("Animation_yabud"),
-"RESET": SubResource("Animation_gne3w"),
-"Walk": SubResource("Animation_4vnnc")
+&"Idle": SubResource("Animation_1c01g"),
+&"Kick_Nut": SubResource("Animation_2fp0u"),
+&"PunchPad": SubResource("Animation_yabud"),
+&"RESET": SubResource("Animation_gne3w"),
+&"Walk": SubResource("Animation_4vnnc")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnjko"]
@@ -2866,7 +2866,7 @@ metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1yxd3")
+&"": SubResource("AnimationLibrary_1yxd3")
 }
 
 [node name="AreaDetection" type="Area2D" parent="."]
