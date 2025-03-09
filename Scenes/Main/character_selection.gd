@@ -1,9 +1,9 @@
 #character_selection.gd
 extends Control
 
-const CHARACTER_PANEL = preload("res://Scenes/UI/character_panel.tscn") # character_panel scene
-const BUTTON_G_CHARACTER_LIST = preload("res://Images/Theme/ButtonG_CharacterList.tres") # Button Group
-const GYM = preload("res://Scenes/Levels/Gym.tscn")
+const CHARACTER_PANEL = preload("uid://boghtjhtrsqxm") # res://Scenes/UI/character_panel.tscn
+const BUTTON_G_CHARACTER_LIST = preload("uid://givfydu65s5a") # Button Group : res://Images/Theme/ButtonG_CharacterList.tres
+const GYM = preload("uid://prtbbqy5doyc") # res://Scenes/Levels/Gym.tscn
 
 
 func _ready() -> void:

@@ -2,7 +2,7 @@
 extends Control
 
 
-const CHARACTER_SELECTION = preload("res://Scenes/Main/character_selection.tscn")
+const CHARACTER_SELECTION = preload("uid://cb42ik0ta0a7b") # res://Scenes/Main/character_selection.tscn
 
 
 

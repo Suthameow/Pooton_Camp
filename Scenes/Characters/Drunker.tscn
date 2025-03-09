@@ -3862,7 +3862,7 @@ _data = {
 &"RESET": SubResource("Animation_mwsxs")
 }
 
-[node name="Drunker" type="CharacterBody2D"]
+[node name="Drunker" type="CharacterBody2D" groups=["Enemy"]]
 metadata/_edit_horizontal_guides_ = [-80.0, -96.0]
 
 [node name="Marker2D" type="Marker2D" parent="."]
