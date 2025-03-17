@@ -10,7 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Pooton Camp"
+config/name="Phuthorn Course"
+config/description="Phuthorn Course: Intensive life in a rural village.
+
+In Phuthorn Course, you’ll balance kicking the butts and hitting the books. It blends humor, combat and charm. 
+Train with Grandpa to master Muay Thai fighting skills for quests and adventures, while Gradma's tutoring helps you work toward your dream university. 
+With a slapstick combat, funny enemies, and captivating hand-drawn art style, the game is full of personality."
 run/main_scene="res://Scenes/Main/main_start.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=60

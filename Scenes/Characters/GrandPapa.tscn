@@ -111,8 +111,8 @@ size = Vector2(29.4117, 27.8922)
 radius = 8.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2ieo"]
-radius = 12.0
-height = 60.0
+radius = 4.0
+height = 20.0
 
 [sub_resource type="Animation" id="Animation_1c01g"]
 resource_name = "Idle"
@@ -2672,7 +2672,7 @@ _data = {
 radius = 14.0
 height = 160.0
 
-[node name="GrandPapa" type="CharacterBody2D"]
+[node name="GrandPapa" type="CharacterBody2D" groups=["Enemy"]]
 collision_mask = 0
 script = ExtResource("1_piwiu")
 metadata/_edit_horizontal_guides_ = [-80.0, -96.0]
@@ -2845,19 +2845,23 @@ texture = SubResource("AtlasTexture_qj1p7")
 [node name="BoxingPads" type="Area2D" parent="Marker2D"]
 collision_layer = 4096
 collision_mask = 512
+monitorable = false
 
 [node name="Padding" type="CollisionShape2D" parent="Marker2D/BoxingPads"]
 position = Vector2(-25, -46)
 rotation = -0.1309
 shape = SubResource("RectangleShape2D_e5rg6")
+debug_color = Color(1, 0, 0, 0.196078)
 
 [node name="NutsBox" type="Area2D" parent="Marker2D"]
 collision_layer = 4096
 collision_mask = 1024
+monitorable = false
 
 [node name="Nuts" type="CollisionShape2D" parent="Marker2D/NutsBox"]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_n4fb4")
+debug_color = Color(1, 0, 0, 0.196078)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708

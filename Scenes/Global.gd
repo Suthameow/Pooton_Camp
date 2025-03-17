@@ -14,6 +14,7 @@ var playerData = PlayerData
 ##### Character List
 signal character_selected
 
+const vertical_different : int = 16
 
 
 ##### Theme

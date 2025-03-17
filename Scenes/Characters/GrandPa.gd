@@ -13,6 +13,7 @@ var punch_quest : int = 10
 var attackable : bool
 
 func _ready() -> void:
+	self.platform_floor_layers = false # BUG fixed : https://forum.godotengine.org/t/what-is-causing-my-collision2d-to-stick-to-each-others/1404/4
 	set_physics_process(false)
 	speed = grandpa_speed
 	$AnimationPlayer.play("Walk")
@@ -36,13 +37,14 @@ func _physics_process(_delta: float) -> void:
 	velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * speed
 	move_and_slide()
 	
+	# Turning system
 	if target_to_chase.global_position.x - self.global_position.x > 0:
 		$Marker2D.scale.x = -1
 	else:
 		$Marker2D.scale.x = 1
 	
 	##### UI Attackable
-	if abs(target_to_chase.global_position.y - self.global_position.y) <= 8 :
+	if abs(target_to_chase.global_position.y - self.global_position.y) <= Global.vertical_different :
 		$Marker2D/Attackable.visible = true
 		attackable = true
 	else: 

@@ -9,7 +9,7 @@ var sprite_action : bool = false
 
 
 func _ready() -> void:
-	pass
+	self.platform_floor_layers = false # BUG fixed : https://forum.godotengine.org/t/what-is-causing-my-collision2d-to-stick-to-each-others/1404/4
 
 
 # Make an Action RPG in Godot 3.2 - https://www.youtube.com/watch?v=EQA9MJ5_TxU&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a&index=2

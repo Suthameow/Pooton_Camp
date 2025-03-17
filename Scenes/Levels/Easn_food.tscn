@@ -351,22 +351,16 @@ tile_map_data = PackedByteArray("AAAIAA4AAAAHAAAAAAAQAA8AAAAGAAAAAAAEAA4AAAAGAAA
 tile_set = SubResource("TileSet_jq2ga")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 y_sort_enabled = true
 position = Vector2(-38, 0)
 navigation_polygon = SubResource("NavigationPolygon_us8qp")
 
-[node name="Doctor" parent="NavigationRegion2D" groups=["Character"] instance=ExtResource("5_30dif")]
+[node name="Doctor" parent="NavigationRegion2D" instance=ExtResource("5_30dif")]
 position = Vector2(784, 695)
 
-[node name="Drunker" parent="NavigationRegion2D" instance=ExtResource("3_emxgg")]
+[node name="Drunker" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_emxgg")]
 position = Vector2(1203, 554)
-
-[node name="Drunker2" parent="NavigationRegion2D" instance=ExtResource("3_emxgg")]
-position = Vector2(1328, 718)
-
-[node name="Drunker3" parent="NavigationRegion2D" instance=ExtResource("3_emxgg")]
-position = Vector2(1173, 873)
+target_to_chase = NodePath("../Doctor")
 
 [node name="Chair" type="Sprite2D" parent="NavigationRegion2D"]
 self_modulate = Color(0.6, 0.215, 0.18, 1)

@@ -443,10 +443,10 @@ navigation_polygon = SubResource("NavigationPolygon_us8qp")
 [node name="SandBag" parent="NavigationRegion2D" instance=ExtResource("6_sbext")]
 position = Vector2(470, 400)
 
-[node name="Doctor" parent="NavigationRegion2D" groups=["Character"] instance=ExtResource("3_prnth")]
+[node name="Doctor" parent="NavigationRegion2D" instance=ExtResource("3_prnth")]
 position = Vector2(780, 560)
 
-[node name="GrandPapa" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") groups=["Enemy"] instance=ExtResource("4_66h0y")]
+[node name="GrandPapa" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("4_66h0y")]
 position = Vector2(1165, 433)
 target_to_chase = NodePath("../Doctor")
 
