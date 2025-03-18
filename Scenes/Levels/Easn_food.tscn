@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://dh4e5a5l15dl6"]
 
 [ext_resource type="Texture2D" uid="uid://dce4am44rpdjr" path="res://Images/Levels/Atlas_Texture_Background.png" id="2_qt1w0"]
-[ext_resource type="PackedScene" uid="uid://d0hagk3d0cc5a" path="res://Scenes/Characters/Drunker.tscn" id="3_emxgg"]
+[ext_resource type="PackedScene" uid="uid://d0hagk3d0cc5a" path="res://Scenes/Characters/Drunker/Drunker.tscn" id="3_emxgg"]
 [ext_resource type="Texture2D" uid="uid://ba1gsocidman" path="res://Images/Levels/Item_1.png" id="4_nuwvy"]
 [ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/Doctor.tscn" id="5_30dif"]
 

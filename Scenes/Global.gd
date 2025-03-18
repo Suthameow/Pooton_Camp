@@ -12,6 +12,7 @@ var playerData = PlayerData
 
 
 ##### Character List
+@warning_ignore("unused_signal")
 signal character_selected
 
 const vertical_different : int = 16
@@ -55,6 +56,7 @@ func clear_node(path : Node):
 
 
 func calculate_damage(base_damage:int, weapon_damage:int, base_defense:int, costume_defense:int) -> int:
+	@warning_ignore("integer_division")
 	var totol_damage = (randi_range(base_damage-10, base_damage+10) + weapon_damage) * 100 / ((base_defense + costume_defense + resistance) + 100 )
 	
 	return round(totol_damage)

@@ -10,7 +10,7 @@ const grandpa_speed : int = 25
 var speed : int
 var target_in_range : bool = false
 var punch_quest : int = 10
-var attackable : bool
+var attackable : bool # Vertical attack check
 
 func _ready() -> void:
 	self.platform_floor_layers = false # BUG fixed : https://forum.godotengine.org/t/what-is-causing-my-collision2d-to-stick-to-each-others/1404/4

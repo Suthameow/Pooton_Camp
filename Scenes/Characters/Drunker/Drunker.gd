@@ -1,5 +1,6 @@
-# Drunker.gd
+# Drunker.gd e001.gd
 extends CharacterBody2D
+#class_name drunker
 
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
@@ -9,17 +10,18 @@ extends CharacterBody2D
 
 
 const speed_drunker : int = 25
+const speed_run : int = 115
 var speed : int
 var target_in_range : bool = false
 var punch_quest : int = 10
-var attackable : bool
+var attackable : bool # Vertical attack check
+var Hurt_condition : bool = false
 
 
 func _ready() -> void:
 	self.platform_floor_layers = false # BUG fixed : https://forum.godotengine.org/t/what-is-causing-my-collision2d-to-stick-to-each-others/1404/4
 	set_physics_process(false)
 	speed = speed_drunker
-	$AnimationPlayer.play("Walk")
 	
 	call_deferred("wait_for_physics")
 
@@ -47,25 +49,52 @@ func _physics_process(_delta: float) -> void:
 	else: 
 		$Marker2D/Attackable.visible = false
 		attackable = false
+	
+	##### Chasing Player 
+	if target_to_chase.is_in_group("Character"):
+		$AnimationTree.set("parameters/conditions/A_Hunt", true)
 
 
+
+##### Area2D AreaAttack ##############################################################
 func _on_area_attack_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Character"):
 		target_in_range = true
-		speed = 115
-		$AnimationPlayer.play("Attack")
-		await $AnimationPlayer.animation_finished
-		
-		speed = 0
-		$AnimationPlayer.play("Tired")
-		$Marker2D/AreaAttack/AttackDetection.disabled = true
-		$Timer.start(5.0)
-		await $AnimationPlayer.animation_finished
-		
-		$AnimationPlayer.play("Walk")
-		speed = speed_drunker
+		speed = speed_run
+	$AnimationTree.set("parameters/conditions/A_Attack", target_in_range)
 
 
-func _on_timer_timeout() -> void:
-	$Marker2D/AreaAttack/AttackDetection.disabled = false
+func _on_area_attack_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Character"):
+		target_in_range = false
+	$AnimationTree.set("parameters/conditions/A_Attack", target_in_range)
+
+
+##### Hurt Box ##############################################################
+func _on_hurt_box_area_entered(_area: Area2D) -> void:
+	var damage = Global.calculate_damage(PlayerData.attack_melee, 0, PlayerData.defense, 0)
 	
+	if attackable == true:
+		Global.display_damage(damage, $Marker2D/HurtBox/Head.global_position)
+		Hurt_condition = true
+		speed = 0
+
+
+
+##### Animation Tree ###########################################################
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Attack":
+		speed = 0
+		$Marker2D/AreaAttack/AttackDetection.disabled = true
+		
+	elif anim_name == "Tired":
+		speed = speed_drunker
+		$Marker2D/AreaAttack/AttackDetection.disabled = false
+	
+	elif  anim_name == "HurtPunch":
+		Hurt_condition = false
+		target_in_range = false
+		speed = speed_drunker
+		$Marker2D/AreaAttack/AttackDetection.disabled = false
+		
+	print(str(anim_name) + " : Speed = " + str(speed))
