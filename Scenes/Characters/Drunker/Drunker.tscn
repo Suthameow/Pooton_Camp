@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://d0hagk3d0cc5a"]
+[gd_scene load_steps=47 format=3 uid="uid://d0hagk3d0cc5a"]
 
 [ext_resource type="Texture2D" uid="uid://c5hdroh5uc1op" path="res://Images/Characters/Drunker.png" id="1_7q36q"]
 [ext_resource type="Script" uid="uid://b8my5rtjdlel1" path="res://Scenes/Characters/Drunker/e001.gd" id="1_llpyb"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://cpanjwgj648my" path="res://Scenes/Characters/Drunker/e001_attack.gd" id="7_4ll0t"]
 [ext_resource type="Script" uid="uid://rqbhjb0ji20f" path="res://Scenes/Characters/Drunker/e001_tired.gd" id="8_l0ho1"]
 [ext_resource type="Script" uid="uid://dx4xs30jb7au4" path="res://Scenes/Characters/Drunker/e001_hurt_punch.gd" id="9_rtw8y"]
+[ext_resource type="Script" uid="uid://61p4e6toseht" path="res://Scenes/Characters/Drunker/e001_hurt_kick.gd" id="10_k8ki3"]
+[ext_resource type="Script" uid="uid://b8cqddyvmpxgx" path="res://Scenes/Characters/Drunker/e001_down.gd" id="11_wvbhr"]
 
 [sub_resource type="Animation" id="Animation_qr38m"]
 resource_name = "Attack"
@@ -1346,6 +1348,18 @@ tracks/53/path = NodePath("Marker2D/HurtBox/Head:disabled")
 tracks/53/interp = 1
 tracks/53/loop_wrap = true
 tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Marker2D/NutsBox/Nuts:disabled")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -3323,6 +3337,18 @@ tracks/55/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Marker2D/NutsBox/Nuts:disabled")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_mwsxs"]
 length = 0.001
@@ -4005,6 +4031,18 @@ tracks/56/path = NodePath("Marker2D/HurtBox/Head:disabled")
 tracks/56/interp = 1
 tracks/56/loop_wrap = true
 tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Marker2D/NutsBox/Nuts:disabled")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -5173,6 +5211,18 @@ tracks/50/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Marker2D/NutsBox/Nuts:disabled")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ylw3s"]
 _data = {
@@ -5299,6 +5349,7 @@ libraries = {
 }
 
 [node name="Marker2D" type="Marker2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, -46)
 
 [node name="Shadow" type="Sprite2D" parent="Marker2D"]
@@ -5496,6 +5547,7 @@ monitorable = false
 [node name="Nuts" type="CollisionShape2D" parent="Marker2D/NutsBox"]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_74ekr")
+disabled = true
 debug_color = Color(1, 0, 0, 0.196078)
 
 [node name="Fist" type="Area2D" parent="Marker2D"]
@@ -5541,12 +5593,21 @@ metadata/_custom_type_script = "uid://rqbhjb0ji20f"
 script = ExtResource("9_rtw8y")
 metadata/_custom_type_script = "uid://dx4xs30jb7au4"
 
+[node name="e001_hurt_kick" type="Node" parent="State_Machine"]
+script = ExtResource("10_k8ki3")
+metadata/_custom_type_script = "uid://61p4e6toseht"
+
+[node name="e001_down" type="Node" parent="State_Machine"]
+script = ExtResource("11_wvbhr")
+metadata/_custom_type_script = "uid://b8cqddyvmpxgx"
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="body_entered" from="Marker2D/AreaAttack" to="." method="_on_area_attack_body_entered"]
-[connection signal="body_exited" from="Marker2D/AreaAttack" to="." method="_on_area_attack_body_exited"]
-[connection signal="area_entered" from="Marker2D/HurtBox" to="." method="_on_hurt_box_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="State_Machine" method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="Marker2D/AreaAttack" to="State_Machine" method="_on_area_attack_body_entered"]
+[connection signal="body_exited" from="Marker2D/AreaAttack" to="State_Machine" method="_on_area_attack_body_exited"]
+[connection signal="area_entered" from="Marker2D/HurtBox" to="State_Machine" method="_on_hurt_box_area_entered"]
+[connection signal="area_entered" from="Marker2D/NutsBox" to="State_Machine" method="_on_nuts_box_area_entered"]
+[connection signal="timeout" from="Timer" to="State_Machine" method="_on_timer_timeout"]

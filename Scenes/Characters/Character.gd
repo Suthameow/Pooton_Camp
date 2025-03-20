@@ -10,6 +10,14 @@ var sprite_action : bool = false
 
 func _ready() -> void:
 	self.platform_floor_layers = false # BUG fixed : https://forum.godotengine.org/t/what-is-causing-my-collision2d-to-stick-to-each-others/1404/4
+	call_deferred("setup_character")
+
+
+func setup_character() -> void:
+	PlayerData.attack_melee = 100
+	PlayerData.attack_range = 0
+	PlayerData.defense = 100
+	PlayerData.costume_defense = 0
 
 
 # Make an Action RPG in Godot 3.2 - https://www.youtube.com/watch?v=EQA9MJ5_TxU&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a&index=2
@@ -17,7 +25,7 @@ func _ready() -> void:
 # animatedSprite2D + Melee attacking - https://www.youtube.com/watch?v=q0WHhsmifkQ
 func _physics_process(_delta: float) -> void:
 	
-	# Controling - character movement
+	##### Controling - character movement
 	var input_vector : Vector2 = Vector2.ZERO
 	input_vector.x = Input.get_axis("Backward", "Forward") #input_vector.x = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 	input_vector.y = Input.get_axis("Vertical_Up", "Vertical_Down") #input_vector.y = Input.get_action_strength("Vertical_Down") - Input.get_action_strength("Vertical_Up")

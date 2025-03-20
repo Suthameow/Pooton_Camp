@@ -26,5 +26,11 @@ func state_physics_update(_delta: float):
 	%NavigationAgent2D.target_position = target_to_chase.global_position
 	e001_body.velocity = e001_body.global_position.direction_to(%NavigationAgent2D.get_next_path_position()) * speed
 	
-	if e001_body.attack_in_range == true and state_machine.current_state == self:
+	if %State_Machine.attack_in_range == true and state_machine.current_state == self:
 		State_Transition.emit(self, "e001_attack")
+	
+	##### Turning system
+	if e001_body.target_to_chase.global_position.x - e001_body.global_position.x > 0:
+		%Marker2D.scale.x = -1
+	else:
+		%Marker2D.scale.x = 1

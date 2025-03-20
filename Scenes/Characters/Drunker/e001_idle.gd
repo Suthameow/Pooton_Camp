@@ -2,9 +2,8 @@
 extends State
 class_name e001_idle 
 
-@onready var state_machine: Node = $".."
+
 @onready var e001_body : drunker = $"../.."
-const speed : int = 0 # Standstill
 
 
 func state_enter():

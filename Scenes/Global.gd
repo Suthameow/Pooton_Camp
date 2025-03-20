@@ -4,7 +4,7 @@ extends Node
 
 
 ##### Resources ################################################################
-var MAIN_DATA : Main = preload("res://Resources/MainData.tres") # Main infomation
+var MAIN_DATA : Main = preload("uid://dxl022otmr2c4") #res://Resources/MainData.tres # Main infomation
 
 ##### Setting ##################################################################
 var saved_game = "user://save/playerSave.res"
@@ -19,12 +19,12 @@ const vertical_different : int = 16
 
 
 ##### Theme
-const EN_BUBBLE = preload("res://Images/Theme/en_Bubble.tres")
-const TH_BUBBLE = preload("res://Images/Theme/th_Bubble.tres")
+const EN_BUBBLE = preload("uid://yemmps56otm7") #res://Images/Theme/en_Bubble.tres
+const TH_BUBBLE = preload("uid://c4mpia10isl2n") #res://Images/Theme/th_Bubble.tres
 
 const resistance : int = 100
-@onready var DAMAGE_NO : PackedScene = preload("res://Scenes/UI/damage_no.tscn")
-@onready var BUBBLE_BOX = preload("res://Scenes/UI/bubble_box.tscn")
+@onready var DAMAGE_NO : PackedScene = preload("uid://7jayk6adqw46") #res://Scenes/UI/damage_no.tscn
+@onready var BUBBLE_BOX = preload("uid://c1cc1mdywm8x5") #res://Scenes/UI/bubble_box.tscn
 
 
 
