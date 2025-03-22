@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://ky2exjwqwa01"]
 
-[ext_resource type="Script" uid="uid://5nxh41klyurv" path="res://Scenes/Characters/GrandPa.gd" id="1_piwiu"]
+[ext_resource type="Script" uid="uid://5nxh41klyurv" path="res://Scenes/Characters/n001/GrandPa.gd" id="1_piwiu"]
 [ext_resource type="Texture2D" uid="uid://ddnmg8ddv7c2h" path="res://Images/Characters/GrandPapa.png" id="1_vk002"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_2q3ev"]
 

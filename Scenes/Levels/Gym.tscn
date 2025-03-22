@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dvd37s8xjmw6h" path="res://Scenes/Levels/Gym.gd" id="1_kqvq4"]
 [ext_resource type="Texture2D" uid="uid://cfu2ai4q8bx00" path="res://Images/Levels/Gym_1024.png" id="2_6uhqn"]
 [ext_resource type="Texture2D" uid="uid://dce4am44rpdjr" path="res://Images/Levels/Atlas_Texture_Background.png" id="2_wfg3r"]
-[ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/Doctor.tscn" id="3_prnth"]
-[ext_resource type="PackedScene" uid="uid://ky2exjwqwa01" path="res://Scenes/Characters/GrandPapa.tscn" id="4_66h0y"]
+[ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/c001/c001.tscn" id="3_prnth"]
+[ext_resource type="PackedScene" uid="uid://ky2exjwqwa01" path="res://Scenes/Characters/n001/GrandPapa.tscn" id="4_66h0y"]
 [ext_resource type="PackedScene" uid="uid://chxa6ld6g0ve1" path="res://Scenes/Levels/SandBag.tscn" id="6_sbext"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhxhy"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=4 uid="uid://dh4e5a5l15dl6"]
 
 [ext_resource type="Texture2D" uid="uid://dce4am44rpdjr" path="res://Images/Levels/Atlas_Texture_Background.png" id="2_qt1w0"]
-[ext_resource type="PackedScene" uid="uid://d0hagk3d0cc5a" path="res://Scenes/Characters/Drunker/Drunker.tscn" id="3_emxgg"]
+[ext_resource type="PackedScene" uid="uid://d0hagk3d0cc5a" path="res://Scenes/Characters/e001/e001.tscn" id="3_emxgg"]
 [ext_resource type="Texture2D" uid="uid://ba1gsocidman" path="res://Images/Levels/Item_1.png" id="4_nuwvy"]
-[ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/Doctor.tscn" id="5_30dif"]
+[ext_resource type="PackedScene" uid="uid://w4swgoox677t" path="res://Scenes/Characters/c001/c001.tscn" id="5_30dif"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhxhy"]
 texture = ExtResource("2_qt1w0")
@@ -355,17 +355,21 @@ y_sort_enabled = true
 position = Vector2(-38, 0)
 navigation_polygon = SubResource("NavigationPolygon_us8qp")
 
-[node name="Doctor" parent="NavigationRegion2D" instance=ExtResource("5_30dif")]
-position = Vector2(784, 695)
-
-[node name="Drunker" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_emxgg")]
-position = Vector2(1203, 554)
-target_to_chase = NodePath("../Doctor")
-
 [node name="Chair" type="Sprite2D" parent="NavigationRegion2D"]
 self_modulate = Color(0.6, 0.215, 0.18, 1)
 position = Vector2(957, 749)
 texture = SubResource("AtlasTexture_1t3d7")
+
+[node name="e001" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_emxgg")]
+position = Vector2(1545, 789)
+target_to_chase = NodePath("../c001")
+
+[node name="e002" parent="NavigationRegion2D" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_emxgg")]
+position = Vector2(1337, 608)
+target_to_chase = NodePath("../c001")
+
+[node name="c001" parent="NavigationRegion2D" instance=ExtResource("5_30dif")]
+position = Vector2(376, 703)
 
 [node name="Front" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAWAA0AAAAPAAQAAAAWAA4AAAAPAAUAAAAWAA8AAAAPAAYAAAARAA0AAAAPAAQAAAARAA4AAAAPAAUAAAARAA8AAAAPAAYAAAAMAA0AAAAPAAQAAAAMAA4AAAAPAAUAAAAMAA8AAAAPAAYAAAAHAA0AAAAPAAQAAAAHAA4AAAAPAAUAAAAHAA8AAAAPAAYAAAACAA0AAAAPAAQAAAACAA4AAAAPAAUAAAACAA8AAAAPAAYAAAASAA0AAAALAAQAAAASAA4AAAALAAUAAAATAA0AAAAMAAQAAAATAA4AAAAMAAUAAAAUAA0AAAANAAQAAAAUAA4AAAANAAUAAAAVAA0AAAAOAAQAAAAVAA4AAAAOAAUAAAANAA0AAAALAAQAAAANAA4AAAALAAUAAAAOAA0AAAAMAAQAAAAOAA4AAAAMAAUAAAAPAA0AAAANAAQAAAAPAA4AAAANAAUAAAAQAA0AAAAOAAQAAAAQAA4AAAAOAAUAAAAIAA0AAAALAAQAAAAIAA4AAAALAAUAAAAJAA0AAAAMAAQAAAAJAA4AAAAMAAUAAAAKAA0AAAANAAQAAAAKAA4AAAANAAUAAAALAA0AAAAOAAQAAAALAA4AAAAOAAUAAAADAA0AAAALAAQAAAADAA4AAAALAAUAAAAEAA0AAAAMAAQAAAAEAA4AAAAMAAUAAAAFAA0AAAANAAQAAAAFAA4AAAANAAUAAAAGAA0AAAAOAAQAAAAGAA4AAAAOAAUAAAD//w0AAAAMAAQAAAD//w4AAAAMAAUAAAAAAA0AAAANAAQAAAAAAA4AAAANAAUAAAABAA0AAAAOAAQAAAABAA4AAAAOAAUAAAAXAA4AAAALAAUAAAAYAA4AAAAMAAUAAAAXAA0AAAALAAQAAAAYAA0AAAAMAAQAAAAZAA4AAAANAAUAAAAaAA4AAAAOAAUAAAAaAA0AAAAOAAQAAAAZAA0AAAANAAQAAAAbAA8AAAAPAAYAAAAbAA4AAAAPAAUAAAAbAA0AAAAPAAQAAAA=")

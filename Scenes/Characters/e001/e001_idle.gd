@@ -1,7 +1,6 @@
 # e001_idle.gd
-extends State
 class_name e001_idle 
-
+extends State
 
 @onready var e001_body : drunker = $"../.."
 

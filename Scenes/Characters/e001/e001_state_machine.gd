@@ -1,4 +1,4 @@
-# StateMachine.gd
+# e001_state_machine.gd
 extends Node
 
 @export var starting_state : State
@@ -10,11 +10,13 @@ var attack_in_range : bool # Enter the attack area
 
 
 func _ready() -> void:
+	##### Setup State_Machine dictionary
 	for child in get_children():
 		if child is State:
 			states[child.name.to_lower()] = child
 			child.State_Transition.connect(on_child_transition)
 	
+	##### Setup Starting State
 	if starting_state:
 		starting_state.state_enter()
 		current_state = starting_state
@@ -73,18 +75,20 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	elif anim_name == "Tired":
 		on_child_transition(current_state, "e001_walk")
 	elif anim_name == "HurtPunch":
-		on_child_transition(current_state, "e001_walk")
+		on_child_transition(current_state, "e001_stun")
 	elif anim_name == "HurtKick":
 		on_child_transition(current_state, "e001_tired")
+	elif anim_name == "Stun":
+		on_child_transition(current_state, "e001_walk")
 	elif anim_name == "Down":
 		$e001_down.speed = 0
-		
+	
 
 
 func _on_area_attack_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Character"):
 		attack_in_range = true
-		%State_Machine.on_child_transition(%State_Machine.current_state, "e001_attack")
+		on_child_transition(current_state, "e001_attack")
 	
 
 
@@ -94,5 +98,5 @@ func _on_area_attack_body_exited(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	on_child_transition(%State_Machine.current_state, "e001_walk")
+	on_child_transition(current_state, "e001_walk")
 	print("Timer time out")

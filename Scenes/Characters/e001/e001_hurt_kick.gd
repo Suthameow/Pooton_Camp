@@ -1,7 +1,6 @@
 # e001_hurt_kick.gd
-extends State
 class_name e001_hurt_kick 
-
+extends State
 
 @onready var e001_body : drunker = $"../.."
 

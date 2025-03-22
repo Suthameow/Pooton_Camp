@@ -1,7 +1,6 @@
 # e001_down.gd
-extends State
 class_name e001_down
-
+extends State
 
 @onready var e001_body : drunker = $"../.."
 var speed : int = 125 # Standstill

@@ -1,6 +1,7 @@
 # e001_walk.gd
-extends State
 class_name e001_walk
+extends State
+
 
 @export var idle : e001_idle
 @export var attack : e001_attack

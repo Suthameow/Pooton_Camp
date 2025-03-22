@@ -1,13 +1,12 @@
-# e001_main.gd
-extends CharacterBody2D
+# e001.gd
 class_name drunker
-
+extends CharacterBody2D
 
 @export var target_to_chase : CharacterBody2D
-@onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var area_attack: CollisionShape2D = $Marker2D/AreaAttack/AttackDetection
+@onready var navigation_agent: NavigationAgent2D = %NavigationAgent2D
+@onready var area_attack: CollisionShape2D = %Marker2D/AreaAttack/AttackDetection
 const HP_BAR_MINION = preload("uid://dlytq1pl1xsx0") # res://Scenes/UI/hp_bar_minion.tscn
-const max_hp : float = 100
+const max_hp : float = 150
 var current_hp : float
 var target_in_range : bool = false
 var attackable : bool # Vertical attack check
