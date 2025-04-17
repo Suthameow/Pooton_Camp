@@ -1,0 +1,692 @@
+[gd_scene load_steps=25 format=3 uid="uid://c83nq8fbmt1cl"]
+
+[ext_resource type="Texture2D" uid="uid://jbea1jrjt2mr" path="res://Images/Intro/Intro_01_1024.png" id="1_ugywe"]
+
+[sub_resource type="Animation" id="Animation_ugywe"]
+resource_name = "Push"
+length = 4.50001
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Hip:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/Hip:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/Hip/Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2.5, 0), Vector2(-2.5, 0), Vector2(-2.5, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/Hip/Body:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/Hip/Back_Leg:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.25, 3.25, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6.865, 8.5), Vector2(6.865, 8.5), Vector2(-10.125, 0.995), Vector2(-10.125, 0.995), Vector2(6.865, 8.5), Vector2(6.865, 8.5), Vector2(6.865, 8.5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/Hip/Back_Leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.25, 3.25, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.36136, 1.36136, 0.0, 0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(7, 11), Vector2(7, 11), Vector2(7, 11)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 1.16667, 1.33333, 1.5, 1.75, 1.83333, 2, 2.25, 2.33333, 2.41667, 2.5, 2.58333, 2.75, 2.91667, 3.08333, 3.25, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.523599, -0.523599, -0.750492, -0.963422, -1.14494, -1.09956, -1.20428, -0.575959, -0.575959, -0.942478, -1.01055, -1.03847, -1.01578, -1.14494, -0.963422, -0.750492, -0.523599, -0.523599, -0.523599]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.58333, 1.66667, 1.75, 2, 2.25, 2.33333, 2.41667, 2.58333, 2.66667, 2.75, 3.08333, 3.25, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(16.0921, 20.9534), Vector2(16.0921, 20.9534), Vector2(11.945, 19.186), Vector2(11.987, 20.238), Vector2(12.134, 19.369), Vector2(12.908, 21.29), Vector2(12.908, 21.29), Vector2(12.606, 20.035), Vector2(12.304, 19.795), Vector2(12.238, 19.785), Vector2(12.135, 21.377), Vector2(14.411, 20.149), Vector2(15.636, 20.393), Vector2(16.0921, 20.9534), Vector2(16.0921, 20.9534), Vector2(16.0921, 20.9534)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.58333, 1.66667, 1.75, 1.83333, 2, 2.25, 2.33333, 2.41667, 2.5, 2.58333, 2.75, 2.91667, 3.08333, 3.25, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.488692, 0.488692, 0.329867, 0.174533, 0.0610865, 0.0733038, -0.792379, -0.792379, -0.29147, -0.148353, 0.0349066, 0.0959931, 0.486947, 0.520108, 0.495674, 0.488692, 0.488692, 0.488692]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:texture:region")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.58333, 2.66667, 2.75, 4.16667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(224, 192, 32, 32), Rect2(224, 192, 32, 32), Rect2(288, 0, 32, 32), Rect2(288, 0, 32, 32), Rect2(224, 192, 32, 32), Rect2(224, 192, 32, 32), Rect2(224, 192, 32, 32)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Marker2D/Hip/Front_Leg:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 3.33333, 4.33333, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 2), Vector2(4.86, 6.385), Vector2(4.86, 6.385), Vector2(-8, 2), Vector2(-8, 2)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Marker2D/Hip/Front_Leg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1, 3.33333, 4.33333, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.23046, 0.165806, 0.165806, 1.23046, 1.23046]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.333333, 3.33333, 4.33333, 4.49999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7.21319, 11.5313), Vector2(6.956, 11.416), Vector2(8.288, 10.751), Vector2(8.17, 11.432), Vector2(8.17, 11.432), Vector2(7.21319, 11.5313), Vector2(7.21319, 11.5313)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.333333, 0.5, 0.583333, 0.666667, 1, 3.33333, 3.5, 3.66667, 3.83333, 4, 4.16667, 4.25, 4.33333, 4.49999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.418879, -0.607375, -0.79587, -0.790634, -0.785398, -0.904081, -0.706858, -0.488692, -0.488692, -0.659734, -0.829031, -0.84823, -0.958186, -0.914553, -0.937242, -0.418879, -0.418879]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 3.33333, 3.75, 4.33333, 4.49998),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15.004, 17.126), Vector2(15.553, 16.437), Vector2(15.448, 17.094), Vector2(14.799, 17.059), Vector2(15.202, 17.35), Vector2(14.494, 18.356), Vector2(16.828, 18.392), Vector2(17.967, 18.273), Vector2(17.967, 18.273), Vector2(15.172, 17.195), Vector2(15.004, 17.126), Vector2(15.004, 17.126)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.333333, 0.5, 0.583333, 0.666667, 1, 3.33333, 3.5, 3.66667, 3.75, 3.83333, 4, 4.16667, 4.25, 4.33333, 4.49999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.829031, -0.539307, -0.260054, -0.0767945, 0.0645772, 0.258309, 0.205949, 0.312414, 0.312414, 0.296706, 0.280998, 0.00174533, 0.21293, 0.0925025, -0.158825, -0.214676, -0.829031, -0.829031]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:texture:region")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.583333, 3.66667, 3.75, 4.33333, 4.49999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(288, 0, 32, 32), Rect2(288, 0, 32, 32), Rect2(224, 192, 32, 32), Rect2(224, 192, 32, 32), Rect2(288, 0, 32, 32), Rect2(288, 0, 32, 32), Rect2(288, 0, 32, 32)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Marker2D/Hip/Head:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 4.33333, 4.49999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.20944, 0.20944, 0.20944]
+}
+
+[sub_resource type="Animation" id="Animation_ejp6f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Hip:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/Hip:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/Hip/Body:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2.5, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/Hip/Body:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/Hip/Back_Leg:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.865, 8.5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/Hip/Back_Leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 11)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.523599]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16.0921, 20.9534)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.488692]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Marker2D/Hip/Back_Leg/Back_LowLeg/Back_Foot:texture:region")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(224, 192, 32, 32)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Marker2D/Hip/Front_Leg:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8, 2)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Marker2D/Hip/Front_Leg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.50098]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.21319, 11.5313)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.418879]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17.379, 20.5663)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.0821]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Marker2D/Hip/Front_Leg/Front_LowLeg/Front_Foot:texture:region")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(288, 0, 32, 32)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Marker2D/Hip/Head:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.20944]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejp6f"]
+_data = {
+&"Push": SubResource("Animation_ugywe"),
+&"RESET": SubResource("Animation_ejp6f")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejp6f"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(288, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs4nj"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(320, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dw4x"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r18u"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(352, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjoua"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48xxy"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(256, 32, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci731"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(224, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7tdy"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugywe"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag8py"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(384, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oba1a"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(192, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0vlg"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(192, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0subj"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(192, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdyc2"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(320, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdw3x"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3dwq"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(352, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou7gh"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2rey"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(256, 32, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jufpg"]
+atlas = ExtResource("1_ugywe")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbqy"]
+radius = 4.0
+height = 20.0
+
+[node name="NPC" type="CharacterBody2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_ejp6f")
+}
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -42.005)
+
+[node name="Hip" type="Sprite2D" parent="Marker2D"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+texture = SubResource("AtlasTexture_ejp6f")
+
+[node name="Back_Arm" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-14, -32)
+rotation = 0.532325
+texture = SubResource("AtlasTexture_rs4nj")
+offset = Vector2(-6, 5)
+
+[node name="Back_LowArm" type="Sprite2D" parent="Marker2D/Hip/Back_Arm"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-9.8, 9.3)
+rotation = 0.331613
+texture = SubResource("AtlasTexture_6dw4x")
+offset = Vector2(-8, 9)
+
+[node name="Back_Hand" type="Sprite2D" parent="Marker2D/Hip/Back_Arm/Back_LowArm"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+show_behind_parent = true
+position = Vector2(-16, 17)
+rotation = -0.872665
+texture = SubResource("AtlasTexture_8r18u")
+offset = Vector2(-1, -4)
+
+[node name="Back_Leg" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+show_behind_parent = true
+position = Vector2(6.865, 8.5)
+texture = SubResource("AtlasTexture_cjoua")
+offset = Vector2(4.5, 5.5)
+
+[node name="Back_LowLeg" type="Sprite2D" parent="Marker2D/Hip/Back_Leg"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(7, 11)
+rotation = -0.523599
+texture = SubResource("AtlasTexture_48xxy")
+offset = Vector2(9.5, 13)
+
+[node name="Back_Foot" type="Sprite2D" parent="Marker2D/Hip/Back_Leg/Back_LowLeg"]
+self_modulate = Color(0.352941, 0.286275, 0.168627, 1)
+position = Vector2(16.0921, 20.9534)
+rotation = 0.488692
+texture = SubResource("AtlasTexture_ci731")
+offset = Vector2(-1.5, 2)
+
+[node name="Body" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-2.5, 0)
+texture = SubResource("AtlasTexture_p7tdy")
+offset = Vector2(0, -19.325)
+
+[node name="Head" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+position = Vector2(-5.965, -34)
+rotation = 0.20944
+texture = SubResource("AtlasTexture_ugywe")
+offset = Vector2(-12, -38)
+
+[node name="Hair" type="Sprite2D" parent="Marker2D/Hip/Head"]
+self_modulate = Color(0.9, 0.73125, 0.225, 1)
+position = Vector2(-14.7572, -50.0199)
+texture = SubResource("AtlasTexture_ag8py")
+
+[node name="Back_Eye" type="Sprite2D" parent="Marker2D/Hip/Head"]
+position = Vector2(-41.503, -20)
+scale = Vector2(0.85, 0.85)
+texture = SubResource("AtlasTexture_oba1a")
+
+[node name="Front_Eye" type="Sprite2D" parent="Marker2D/Hip/Head"]
+position = Vector2(-18, -20)
+texture = SubResource("AtlasTexture_f0vlg")
+flip_h = true
+
+[node name="Mouth" type="Sprite2D" parent="Marker2D/Hip/Head"]
+texture = SubResource("AtlasTexture_0subj")
+offset = Vector2(-28.35, -4)
+
+[node name="Front_Arm" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-12.005, -29)
+rotation = 0.532325
+texture = SubResource("AtlasTexture_jdyc2")
+offset = Vector2(-6, 5)
+
+[node name="Front_LowArm" type="Sprite2D" parent="Marker2D/Hip/Front_Arm"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-9.77, 9.335)
+rotation = 0.331613
+texture = SubResource("AtlasTexture_bdw3x")
+offset = Vector2(-8, 9)
+
+[node name="Front_Hand" type="Sprite2D" parent="Marker2D/Hip/Front_Arm/Front_LowArm"]
+self_modulate = Color(0.75, 0.67125, 0.615, 1)
+show_behind_parent = true
+position = Vector2(-16, 17)
+rotation = -0.872665
+texture = SubResource("AtlasTexture_l3dwq")
+offset = Vector2(-1, -4)
+
+[node name="Front_Leg" type="Sprite2D" parent="Marker2D/Hip"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(-8, 2)
+rotation = 1.50098
+texture = SubResource("AtlasTexture_ou7gh")
+offset = Vector2(4.5, 5.5)
+
+[node name="Front_LowLeg" type="Sprite2D" parent="Marker2D/Hip/Front_Leg"]
+self_modulate = Color(0.117647, 0.392157, 0.588235, 1)
+position = Vector2(7.21319, 11.5313)
+rotation = -0.418879
+texture = SubResource("AtlasTexture_s2rey")
+offset = Vector2(9.145, 10.37)
+
+[node name="Front_Foot" type="Sprite2D" parent="Marker2D/Hip/Front_Leg/Front_LowLeg"]
+self_modulate = Color(0.352941, 0.286275, 0.168627, 1)
+position = Vector2(17.379, 20.5663)
+rotation = -1.0821
+texture = SubResource("AtlasTexture_jufpg")
+offset = Vector2(-4.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_hrbqy")
+metadata/_edit_lock_ = true
