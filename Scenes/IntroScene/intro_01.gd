@@ -2,16 +2,29 @@ extends Node2D
 
 
 func _ready() -> void:
-	intro_01_start()
-	$NPC1.get_node("%AnimationPlayer").play("Push")
-	$NPC2.get_node("%AnimationPlayer").play("Push")
-	$NPC3.get_node("%AnimationPlayer").play("Push")
-	$NPC4.get_node("%AnimationPlayer").play("Push")
+	call_deferred("npc_go_left")
+	call_deferred("noble_go_left")
 
 
-func intro_01_start() -> void:
-	var tween = get_tree().create_tween().set_loops(0)
-	tween.tween_property($NPC1, "position", Vector2.LEFT*50, 2.25).as_relative().set_trans(Tween.TRANS_SINE)
-	tween.set_parallel().tween_property($NPC2, "position", Vector2.LEFT*50, 2.25).as_relative().set_trans(Tween.TRANS_SINE)
-	tween.set_parallel().tween_property($NPC3, "position", Vector2.LEFT*50, 2.25).as_relative().set_trans(Tween.TRANS_SINE)
-	tween.set_parallel().tween_property($NPC4, "position", Vector2.LEFT*50, 2.25).as_relative().set_trans(Tween.TRANS_SINE)
+func noble_go_left() -> void :
+	%Noble/Noble1.get_node("%AnimationPlayer").play("walk1")
+	%Noble/Noble2.get_node("%AnimationPlayer").play("walk2")
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(%Noble/Noble1, "position", Vector2(620, 325), 10.0)
+	tween.parallel().tween_property(%Noble/Noble2, "position", Vector2(675, 325), 10.0)
+	
+	tween.tween_callback(look_down.bind(%Noble/Noble1))
+	tween.tween_callback(look_down.bind(%Noble/Noble2)).set_delay(1)
+
+
+func look_down(path : CharacterBody2D) -> void:
+	path.get_node("%AnimationPlayer").play("Look")
+
+
+func npc_go_left() -> void :
+	for npc_node in %NPC.get_children(): # Get_every nodes in %NPC
+		npc_node.get_node("%AnimationPlayer").play("Push")
+		var tween = get_tree().create_tween().set_loops(0)
+		tween.tween_property(npc_node, "position", Vector2.LEFT * Global.randome_int(20, 50), 2.25).as_relative().set_trans(Tween.TRANS_SINE)
+		

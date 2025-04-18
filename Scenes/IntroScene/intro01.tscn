@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://dv5tj51sj2ga1"]
+[gd_scene load_steps=13 format=4 uid="uid://dv5tj51sj2ga1"]
 
 [ext_resource type="Texture2D" uid="uid://dce4am44rpdjr" path="res://Images/Levels/Atlas_Texture_Background.png" id="1_6mgvl"]
 [ext_resource type="Texture2D" uid="uid://jbea1jrjt2mr" path="res://Images/Intro/Intro_01_1024.png" id="1_lrj3o"]
 [ext_resource type="Script" uid="uid://bm23cn4g0sb3l" path="res://Scenes/IntroScene/intro_01.gd" id="1_ulfmg"]
-[ext_resource type="PackedScene" uid="uid://cl4vl7a36mtiq" path="res://Scenes/IntroScene/Noble_02.tscn" id="3_7u8mc"]
-[ext_resource type="PackedScene" uid="uid://cysflx1svpm7b" path="res://Scenes/IntroScene/Noble_01.tscn" id="3_lj3cd"]
+[ext_resource type="PackedScene" uid="uid://cysflx1svpm7b" path="res://Scenes/IntroScene/Noble.tscn" id="3_lj3cd"]
 [ext_resource type="PackedScene" uid="uid://c83nq8fbmt1cl" path="res://Scenes/Characters/npc001/npc001.tscn" id="5_t11i2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7u8mc"]
@@ -179,11 +178,14 @@ libraries = {
 &"": SubResource("AnimationLibrary_t11i2")
 }
 
-[node name="Noble_01" parent="." instance=ExtResource("3_lj3cd")]
-position = Vector2(630, 320)
+[node name="Noble" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="Noble_02" parent="." instance=ExtResource("3_7u8mc")]
-position = Vector2(895, 320)
+[node name="Noble1" parent="Noble" instance=ExtResource("3_lj3cd")]
+position = Vector2(700, 325)
+
+[node name="Noble2" parent="Noble" instance=ExtResource("3_lj3cd")]
+position = Vector2(820, 325)
 
 [node name="Tower" type="Sprite2D" parent="."]
 position = Vector2(960, 1080)
@@ -191,20 +193,27 @@ texture = SubResource("AtlasTexture_6mgvl")
 offset = Vector2(0, -384)
 metadata/_edit_lock_ = true
 
-[node name="NPC1" parent="." instance=ExtResource("5_t11i2")]
-position = Vector2(700, 1080)
+[node name="NPC" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="NPC2" parent="." instance=ExtResource("5_t11i2")]
-position = Vector2(850, 1080)
+[node name="NPC1" parent="NPC" instance=ExtResource("5_t11i2")]
+position = Vector2(200, 1080)
 
-[node name="NPC3" parent="." instance=ExtResource("5_t11i2")]
-position = Vector2(1100, 1080)
+[node name="NPC2" parent="NPC" instance=ExtResource("5_t11i2")]
+position = Vector2(363, 1080)
 
-[node name="NPC4" parent="." instance=ExtResource("5_t11i2")]
-position = Vector2(1350, 1080)
+[node name="NPC3" parent="NPC" instance=ExtResource("5_t11i2")]
+position = Vector2(929, 1080)
+
+[node name="NPC4" parent="NPC" instance=ExtResource("5_t11i2")]
+position = Vector2(1533, 1080)
+
+[node name="NPC5" parent="NPC" instance=ExtResource("5_t11i2")]
+position = Vector2(1919, 1080)
 
 [node name="Gradient" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.705882)
 position = Vector2(962, 709.5)
 scale = Vector2(65.9375, 12.2969)
 texture = SubResource("AtlasTexture_t11i2")
+metadata/_edit_lock_ = true

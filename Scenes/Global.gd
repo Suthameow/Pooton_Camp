@@ -101,3 +101,8 @@ func display_dialoque(dialoque : String, duration : float, path : Node):
 	
 	if path.get_children().size() > 0:  # BUG: Destroy before await finish
 		path.get_child(0).call_deferred("queue_free")
+
+
+func randome_int(MINI : int, MAXI : int) :
+	var random_number = randi_range(MINI, MAXI)
+	return random_number
