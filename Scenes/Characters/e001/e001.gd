@@ -2,6 +2,9 @@
 class_name drunker
 extends CharacterBody2D
 
+# BUG FIXED: Same animation plays on seperate instances
+# Do check "Local to Scene" the Texture -> Resource for resolve the AnimationPlayer bug - https://forum.godotengine.org/t/same-animation-plays-on-seperate-instances/99588
+
 @export var target_to_chase : CharacterBody2D
 @onready var navigation_agent: NavigationAgent2D = %NavigationAgent2D
 @onready var area_attack: CollisionShape2D = %Marker2D/AreaAttack/AttackDetection

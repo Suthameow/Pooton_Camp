@@ -5708,22 +5708,27 @@ atlas = ExtResource("1_7q36q")
 region = Rect2(0, 0, 96, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpw8h"]
+resource_local_to_scene = true
 atlas = ExtResource("1_7q36q")
 region = Rect2(288, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0que"]
+resource_local_to_scene = true
 atlas = ExtResource("1_7q36q")
 region = Rect2(256, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1n0c4"]
+resource_local_to_scene = true
 atlas = ExtResource("1_7q36q")
 region = Rect2(256, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7ryj"]
+resource_local_to_scene = true
 atlas = ExtResource("1_7q36q")
 region = Rect2(256, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aijth"]
+resource_local_to_scene = true
 atlas = ExtResource("1_7q36q")
 region = Rect2(256, 0, 32, 32)
 

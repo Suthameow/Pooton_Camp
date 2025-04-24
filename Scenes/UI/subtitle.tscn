@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct5km442barlu"]
+
+[ext_resource type="Script" uid="uid://cgj8iq373nhxb" path="res://Scenes/UI/subtitle.gd" id="1_onbj2"]
+[ext_resource type="Theme" uid="uid://b8ijxab5wx82h" path="res://Images/Theme/th_UI.tres" id="2_sagr4"]
+
+[node name="Subtitle" type="CanvasLayer"]
+script = ExtResource("1_onbj2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 800
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_sagr4")
+text = "ตัวอย่าง Subtitle โอวเย้"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
