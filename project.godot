@@ -17,7 +17,7 @@ In Phuthorn Course, you’ll balance kicking the butts and hitting the books. It
 Train with Grandpa to master Muay Thai fighting skills for quests and adventures, while Gradma's tutoring helps you work toward your dream university. 
 With a slapstick combat, funny enemies, and captivating hand-drawn art style, the game is full of personality."
 run/main_scene="res://Scenes/Main/main_start.tscn"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 run/max_fps=60
 config/icon="res://icon.svg"
 
