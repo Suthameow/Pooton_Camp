@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://b8ijxab5wx82h"]
+[gd_resource type="Theme" format=3 uid="uid://b8ijxab5wx82h"]
 
 [ext_resource type="FontFile" uid="uid://bngj84ep1o6y" path="res://Fonts/Mali/Mali-SemiBold.ttf" id="1_28bok"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_1k1a2"]

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c4mpia10isl2n"]
+[gd_resource type="Theme" format=3 uid="uid://c4mpia10isl2n"]
 
 [ext_resource type="FontFile" uid="uid://c31xefx26850c" path="res://Fonts/Mali/Mali-Regular.ttf" id="1_h35cu"]
 [ext_resource type="Texture2D" uid="uid://cdiwegdqe3qu1" path="res://Images/UI/UI_1024.png" id="2_nge38"]
